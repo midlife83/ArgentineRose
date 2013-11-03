@@ -1,0 +1,53 @@
+/* Modification of Bootstrap*/
+
+.nav-tabs > li.right {
+  float: right;
+  margin-bottom: -1px;
+}
+
+.nav-tabs > li.left {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.input-group-addon {
+min-width: 300px;
+text-align: left;
+}
+
+.form-horizontal .control-label-left{
+    text-align: left;
+	padding-top: 7px;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+  
+ .row .btn {
+ margin-right: 14px;
+ margin-bottom: 14px;
+ width: 120px;
+ }
+ 
+ 
+.nav-pills > li.right {
+  float: right;
+  margin-bottom: -1px;
+}
+
+.nav-pills > li.left {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.full-length-align-center {
+min-width: 100%;
+text-align: center;
+}
+
+.no-space {
+margin-top: -7px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px;
+padding: 0px;
+}
