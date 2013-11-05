@@ -21,21 +21,15 @@
 session_start();
 
 
-$name=$_POST['studentName'];
-$number=$_POST['studentNumber'];
-$section=$_POST['section'];
-$title=$_POST['title'];
-$description=$_POST['description'];
-$assignment=$_POST['assignedTo'];
-$label=$_POST['label'];
+$solution=$_POST['solution'];
 
-$_SESSION['name'] = $name;
-$_SESSION['number'] = $number;
-$_SESSION['section'] = $section;
-$_SESSION['title'] = $title;
-$_SESSION['description'] = $description;
-//$_SESSION['assignment'] = $assignment;
-//$_SESSION['label'] = $label;
+$name = $_SESSION['name']; 
+$number = $_SESSION['number']; 
+$section = $_SESSION['section'];
+$title = $_SESSION['title'];
+$description = $_SESSION['description'];
+//$assignment = $_SESSION['assignment'];
+//$label = $_SESSION['label'];
 
 ?>
 
@@ -55,7 +49,7 @@ $_SESSION['description'] = $description;
             <div class="col-md-8">
 
               <p>
-                Assigned to Alyssa Dunn
+                Resolved by Alyssa Dunn on Oct 19th 2013 7:13am
               </p>
 
               <p>
@@ -63,7 +57,7 @@ $_SESSION['description'] = $description;
               </p>
 
               <h3>
-                Status: <font color="red">Unresolved</font>
+                Status: <font color="green">Resolved</font>
               </h3>
             </div>
 
@@ -94,15 +88,13 @@ $_SESSION['description'] = $description;
           <br>
 
           <div class="btn-group">
-            <button type="button" class="btn btn-default">Edit</button> 
             <button type="button" class="btn btn-default">Follow</button> 
-            <button type="button" class="btn btn-default" onclick="window.location.href='resolve.php'">Resolve</button>
           </div>
 
           <hr>
           
-
-          <div class="container">
+         <div class="container">
+          <div class="col-sm-6">
             <h3>
               Description:
             </h3>
@@ -112,8 +104,24 @@ $_SESSION['description'] = $description;
             echo $description."<br />";
  ?>
             </p>
+          </div>
+          <div class="col-lg-1">
+            <h3>
+              Solution:
+            </h3>
+
+            <p>
+ <?php           
+            echo $solution."<br />";
+ ?>
+            </p>
+           </div>
+</div>
+            
+            
 			<br>
-			
+            
+			<div class="container">
 			<h3>
 			   Comments:
 			</h3>
@@ -143,6 +151,7 @@ $_SESSION['description'] = $description;
 			<div class="row" align="right">
 				<button type="button" class="btn btn-default"> &#43; Comment</button> 
 			</div>
+</div>
 
 </body>
 </html>
