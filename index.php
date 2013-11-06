@@ -42,7 +42,7 @@
       <div class="tab-content">
         <div class="tab-pane" id="students_tab">
         <div class="panel-heading" align="center">
-            <h2 style="margin-top:5px; margin-bottom:0px"><span class="label label-default">Students</span></h2>
+            <h2 style="margin-top:5px; margin-bottom:0px; float:center">Students</h2>
           </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
@@ -57,7 +57,7 @@
 <!--Issues Page-->
         <div class="tab-pane active" id="issues_tab">
           <div class="panel-heading" align="center">
-            <h2 style="margin-top:5px; margin-bottom:0px"><span class="label label-default">List of Issues</span></h2>
+            <h2 style="margin-top:5px; margin-bottom:0px; float:center">List of Issues</h2>
           </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
@@ -230,7 +230,7 @@
 
         <div class="tab-pane" id="report_issues_tab">
           <div class="panel-heading" align="center">
-            <h2 style="margin-top:5px"><span class="label label-default">Report An Issue</span></h2>
+            <h2 style="margin-top:5px; float:center">Report An Issue</h2>
           </div>
 
           <div class="panel panel-default">
