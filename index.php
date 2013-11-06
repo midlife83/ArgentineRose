@@ -17,7 +17,7 @@
 
     <!-- NAVIGATION -->
       <div class="row" id="navigation-bar">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" style="margin-top:5px">
           <li class="left">
             <a href="#students_tab" data-toggle="tab">View Students</a>
           </li>
