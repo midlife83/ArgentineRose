@@ -39,7 +39,9 @@
       <!-- STUDENTS PAGE-->
       <div class="tab-content">
         <div class="tab-pane" id="students_tab">
-        <h2 class="panel-heading" align="left">Student List</h2>
+        <div class="panel-heading" align="center">
+            <h2 style="margin-top:5px; margin-bottom:0px"><span class="label label-default">Students</span></h2>
+          </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
               <label for="studentName" class="col-sm-2 control-label">Search Students:</label>
@@ -50,10 +52,11 @@
             </div>
           </form>
         </div>
-
+<!--Issues Page-->
         <div class="tab-pane active" id="issues_tab">
-          <h2 class="panel-heading" align="left">Issues</h2>
-
+          <div class="panel-heading" align="center">
+            <h2 style="margin-top:5px; margin-bottom:0px"><span class="label label-default">List of Issues</span></h2>
+          </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
               <label class="col-sm-2 control-label">Search Issues: </label>
@@ -221,31 +224,42 @@
             </div>
           </div>
         </div>
+		
+<!-- Report An Issue Page -->
 
         <div class="tab-pane" id="report_issues_tab">
-          <h2 class="panel-heading" align="left">Report an Issue</h2>
+          <div class="panel-heading" align="center">
+            <h2 style="margin-top:5px"><span class="label label-default">Report An Issue</span></h2>
+          </div>
 
           <div class="panel panel-default">
             <div class="panel-body">
               <form class="form-horizontal" role="form" method="POST" action="single_issue.php" target='_blank'>
                 <div class="form-group">
                   <label for="studentName" class="col-sm-2 control-label">Student Name</label>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                     <input type="text" class="form-control" id="studentName" name="studentName" placeholder="Student Name">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="studentNumber" class="col-sm-2 control-label">Student Number</label>
-                  <div class="col-sm-3">
-                    <input type="number" class="form-control" id="studentNumber" name="studentNumber" placeholder="Student Number">
+                  <div class="col-sm-4">
+                    <input type="number" class="form-control" id="studentNumber" maxlength="8" name="studentNumber" placeholder="Student Number">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="section" class="col-sm-2 control-label">Section</label>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" id="section" name="section" placeholder="Section">
+                  <div class="col-sm-4">
+                   <select id="section" class="form-control">
+					  <option>T1A</option>
+					  <option>T1B</option>
+					  <option>T1C</option>					  
+					  <option>T2A</option>
+					  <option>T2B</option>
+					  <option>T3C</option>
+					</select>
                   </div>
                 </div>
 
@@ -254,56 +268,49 @@
                 <div class="form-group">
                   <label for="title" class="col-sm-2 control-label">Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title of the issue">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="description" class="col-sm-2 control-label">Description</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" name="description" rows="6"></textarea>
+                    <textarea class="form-control" name="description" rows="6"  placeholder="Detail of the issue"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="assignedTo" class="col-sm-2 control-label">Assigned To</label>
-                  <div class="dropdown col-sm-10">
-                    <button id="assignedTo" name="assignedTo" type="button" class="btn btn-default dropdown-toggle" data-toggle=
-                    "dropdown">Alyssa(me) <span class="caret">.</span></button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">Alyssa(me)</a>
-                      </li>
-
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">Jeff Jung</a>
-                      </li>
-
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">Steve Jobs</a>
-                      </li>
-                    </ul>
+                  <div class="col-sm-4">
+                   <select id="assignedTo" class="form-control">
+					  <option>[Prof] Joan McGray (me)</option>
+					  <option>[Prof] Karrot McLean</option>
+					  <option>[Prof] Greger Wales</option>					  
+					  <option>[Prof] Meg Kallen</option>
+					  <option>[TA] Bonny Salvo</option>
+					  <option>[TA] Erica Wilbur</option>
+					  <option>[TA] Jazmine Hermes</option>
+					  <option>[TA] Shasta Francois</option>
+					</select>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="label" class="col-sm-2 control-label">Label</label>
-                  <div class="dropdown col-sm-10">
-                    <button id="label" name="label" type="button" class="btn btn-default dropdown-toggle" data-toggle=
-                    "dropdown">General <span class="caret">.</span></button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">General</a>
-                      </li>
-
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">Q1</a>
-                      </li>
-
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">Q2</a>
-                      </li>
-                    </ul>
+                  <div class="col-sm-4">
+                   <select id="label" class="form-control">
+					  <option>General</option>
+					  <option>Q1</option>
+					  <option>Q2</option>					  
+					  <option>Q3</option>
+					  <option>Q4</option>
+					  <option>Midterm1</option>
+					  <option>Midterm2</option>
+					  <option>Final</option>
+					  <option>Lab1</option>
+					  <option>Lab2</option>
+					  <option>Lab3</option>
+					</select>
                   </div>
                 </div>              
             </div>
