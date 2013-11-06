@@ -55,6 +55,11 @@ padding: 0px;
 .table {
   margin-top:20px;
 }
+
+.table tr {
+    cursor: pointer;
+}
+
 img
 {
 float:left;
