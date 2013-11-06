@@ -34,8 +34,8 @@ $_SESSION['number'] = $number;
 $_SESSION['section'] = $section;
 $_SESSION['title'] = $title;
 $_SESSION['description'] = $description;
-//$_SESSION['assignment'] = $assignment;
-//$_SESSION['label'] = $label;
+$_SESSION['assignment'] = $assignment;
+$_SESSION['label'] = $label;
 
 ?>
 
@@ -55,11 +55,17 @@ $_SESSION['description'] = $description;
             <div class="col-md-8">
 
               <p>
-                Assigned to Alyssa Dunn
+                Assigned to
+<?php           
+            echo $assignment."<br />";
+ ?>
               </p>
 
               <p>
-                Labels: #Quiz
+                Labels: #
+<?php           
+            echo $label."<br />";
+ ?> 
               </p>
 
               <h3>

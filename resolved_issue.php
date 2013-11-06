@@ -28,8 +28,8 @@ $number = $_SESSION['number'];
 $section = $_SESSION['section'];
 $title = $_SESSION['title'];
 $description = $_SESSION['description'];
-//$assignment = $_SESSION['assignment'];
-//$label = $_SESSION['label'];
+$assignment = $_SESSION['assignment'];
+$label = $_SESSION['label'];
 
 ?>
 
@@ -53,7 +53,10 @@ $description = $_SESSION['description'];
               </p>
 
               <p>
-                Labels: #Quiz
+                Labels: #
+<?php           
+            echo $label."<br />";
+ ?>
               </p>
 
               <h3>

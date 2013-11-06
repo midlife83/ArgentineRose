@@ -253,7 +253,7 @@
                 <div class="form-group">
                   <label for="section" class="col-sm-2 control-label">Section</label>
                   <div class="col-sm-4">
-                   <select id="section" class="form-control">
+                   <select id="section" name="section" class="form-control">
 					  <option>T1A</option>
 					  <option>T1B</option>
 					  <option>T1C</option>					  
@@ -283,7 +283,7 @@
                 <div class="form-group">
                   <label for="assignedTo" class="col-sm-2 control-label">Assigned To</label>
                   <div class="col-sm-4">
-                   <select id="assignedTo" class="form-control">
+                   <select id="assignedTo" name="assignedTo" class="form-control">
 					  <option>[Prof] Joan McGray (me)</option>
 					  <option>[Prof] Karrot McLean</option>
 					  <option>[Prof] Greger Wales</option>					  
@@ -299,7 +299,7 @@
                 <div class="form-group">
                   <label for="label" class="col-sm-2 control-label">Label</label>
                   <div class="col-sm-4">
-                   <select id="label" class="form-control">
+                   <select id="label" name="label" class="form-control">
 					  <option>General</option>
 					  <option>Q1</option>
 					  <option>Q2</option>					  
