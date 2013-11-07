@@ -1,3 +1,5 @@
+
+
 function changeToMarkAsUnresolved()
 {
 	document.getElementById("markIssueButton").firstChild.data= "Mark As Unresolved";
@@ -15,11 +17,12 @@ function changeToMarkAsBothResolvedAndUnresolved()
 
 function updateIssuesTable()
 {
-	if ($('#issuesTabContent').find('.nav-pills .active').text()=="Unresolved")
+	var $tab = $('#issuesTabContent'), $active = $tab.find('.tab-pane.active'), text = $active.find('p:hidden').text();
+	if (text=="unresolved_tab")
 	{
 		updateUnresolvedIssueTable();
 	}
-	else if ($('#issuesTabContent').find('.nav-pills .active').text()=="Resolved")
+	else if (text=="resolved_tab")
 	{
 		updateResolvedIssueTable();
 	}

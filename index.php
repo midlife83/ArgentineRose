@@ -71,7 +71,7 @@
     </form>
 
     <div class="container" id="issuesTabContainer">
-     <div class="row" id="issuesTabContent">
+     <div class="row">
       <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
        <li class="active left">
         <a href="#unresolved_tab" data-toggle="tab" onClick="changeToMarkAsResolved()">Unresolved</a>
@@ -91,7 +91,7 @@
      </div>
 
 
-     <div class="tab-content">
+     <div class="tab-content" id="issuesTabContent">
       <div class="tab-pane active" id="unresolved_tab">
        <table class="table table-hover table-striped" id="unresolved_tab_table">
         <tr class="info">
@@ -109,6 +109,7 @@
         </tr>
         <?php include("populateUnresolvedIssues.php"); ?> 
        </table>
+	   <p style="display: none">unresolved_tab</p>
       </div>
 
       <div class="tab-pane" id="resolved_tab">
@@ -128,6 +129,7 @@
         </tr>
 		<?php include("populateResolvedIssues.php"); ?> 
        </table>
+	   <p style="display: none">resolved_tab</p>
       </div>
 
       <div class="tab-pane" id="all_tab">
