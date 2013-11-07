@@ -96,7 +96,7 @@
        <table class="table table-hover table-striped" id="unresolved_tab_table">
         <tr class="info">
          <td>
-          <input type="checkbox">
+          <input type="checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
          </td>
          <td>Ref#</td>
          <td>Submitted by</td>
@@ -116,7 +116,7 @@
        <table class="table table-hover table-striped" id="resolved_tab_table">
         <tr class="info">
          <td>
-          <input type="checkbox">
+          <input type="checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
          </td>
          <td>Ref#</td>
          <td>Submitted by</td>
@@ -136,7 +136,7 @@
        <table class="table table-hover table-striped"  id="all_tab_table">
         <tr class="info">
          <td>
-          <input type="checkbox">
+          <input type="checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
          </td>
          <td>Ref#</td>
          <td>Submitted by</td>

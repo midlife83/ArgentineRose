@@ -1,4 +1,36 @@
-
+function checkAllCheckboxes(checkBox)
+{	
+	var $tab = $('#issuesTabContent'), $active = $tab.find('.tab-pane.active'), text = $active.find('p:hidden').text();	
+	var table;
+	if (text=="unresolved_tab")
+	{
+		table = document.getElementById("unresolved_tab_table");
+		
+	}
+	else if (text=="resolved_tab")
+	{
+		table = document.getElementById("resolved_tab_table");
+	}
+	else
+	{
+		table = document.getElementById("all_tab_table");
+	}
+	
+	var flag;
+	if (checkBox.checked)
+	{
+		flag = true;		
+	}
+	else
+	{
+		flag = false;
+	}
+	
+	for (var i = 1; i < table.rows.length; i++) 
+	{
+		table.rows[i].cells[0].firstChild.checked = flag;
+	}
+}
 
 function changeToMarkAsUnresolved()
 {
