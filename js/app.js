@@ -1,15 +1,74 @@
+function changeToMarkAsUnresolved()
+{
+	document.getElementById("markIssueButton").firstChild.data= "Mark As Unresolved";
+}
+
+function changeToMarkAsResolved()
+{
+	document.getElementById("markIssueButton").firstChild.data= "Mark As Resolved";
+}
+
+function changeToMarkAsBothResolvedAndUnresolved()
+{
+	document.getElementById("markIssueButton").firstChild.data= "Mark As Unresolved/Resolved";
+}
+
 function updateIssuesTable()
 {
 	if ($('#issuesTabContent').find('.nav-pills .active').text()=="Unresolved")
 	{
 		updateUnresolvedIssueTable();
 	}
-	else
+	else if ($('#issuesTabContent').find('.nav-pills .active').text()=="Resolved")
 	{
 		updateResolvedIssueTable();
 	}
+	else
+	{
+		updateAllIssueTable();
+	}
 }
 
+function updateAllIssueTable()
+{
+	var unresolvedTable = document.getElementById("unresolved_tab_table");
+	var resolvedTable = document.getElementById("resolved_tab_table");
+	var allIssuesTable = document.getElementById("all_tab_table");
+	var tableRows = allIssuesTable.rows;
+	var x = tableRows.length;		
+	var row, cells;
+	for (var i = 0; i < x; i++) 
+	{
+		row = tableRows[i];
+		cells = row.cells;			
+		if (cells[0].childNodes[0].checked)
+		{				
+			for (var j = 0; j < unresolvedTable.rows.length; j++) 
+			{
+				if (unresolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
+				{
+					unresolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					j = unresolvedTable.rows.length;
+				}
+			}
+			
+			for (var j = 0; j < resolvedTable.rows.length; j++) 
+			{
+				if (resolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
+				{
+					resolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					j = resolvedTable.rows.length;
+				}
+			}
+			
+			row.className='success';
+			row.cells[0].childNodes[0].checked = false;
+			
+			updateUnresolvedIssueTable();
+			updateResolvedIssueTable();
+		}
+	}
+}
 
 function updateUnresolvedIssueTable()
 {

@@ -72,21 +72,21 @@
 
     <div class="container" id="issuesTabContainer">
      <div class="row" id="issuesTabContent">
-      <ul class="nav nav-pills col-md-10" style="margin-bottom:0px">
+      <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
        <li class="active left">
-        <a href="#unresolved_tab" data-toggle="tab">Unresolved</a>
+        <a href="#unresolved_tab" data-toggle="tab" onClick="changeToMarkAsResolved()">Unresolved</a>
        </li>
 
        <li class="left">
-        <a href="#resolved_tab" data-toggle="tab">Resolved</a>
+        <a href="#resolved_tab" data-toggle="tab" onClick="changeToMarkAsUnresolved()">Resolved</a>
        </li>
 
        <li class="left">
-        <a href="#all_tab" data-toggle="tab">All</a>
+        <a href="#all_tab" data-toggle="tab" onClick="changeToMarkAsBothResolvedAndUnresolved()">All</a>
        </li>
       </ul>
 	  
-      <button type="button" class="btn btn-default col-md-2" style="float:right;margin-bottom:0px; margin-top:5px" onclick="updateIssuesTable()">Mark As Resolved
+      <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton" onclick="updateIssuesTable()">Mark As Resolved
 	  </button>
      </div>
 
