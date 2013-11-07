@@ -46,9 +46,9 @@
           </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
-              <label for="studentName" class="col-sm-2 control-label">Search Students:</label>
+              <label for="studentSearch" class="col-sm-2 control-label">Search Students:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="studentName" placeholder=
+                <input type="text" class="form-control" id="studentSearch" placeholder=
                 "Student Name/ Student Number/ Professor Name/ TA Name/ Key Word">
               </div>
             </div>
@@ -61,9 +61,9 @@
           </div>
           <form class="form-horizontal" role="search" style="margin-top: 10px">
             <div class="form-group" align="center">
-              <label class="col-sm-2 control-label">Search Issues: </label>
+              <label class="col-sm-2 control-label" for="searchIssues">Search Issues: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="studentName" placeholder=
+                <input type="text" class="form-control" id="searchIssues" placeholder=
                 "Enter Student Name/ Student Number/ Professor Name/ TA Name/ Key Word">
               </div>
             </div>
@@ -132,6 +132,7 @@
               <div class="tab-pane" id="resolved_tab">
                 <table class="table table-hover">
                   <tr class="info">
+				  <td><input type="checkbox"></td>
                   <td>Ref#</td>
                   <td>Submitted by</td>
                   <td>Issue Title</td>
@@ -141,34 +142,37 @@
                   <td>Last Activity</td>
                   <td>Label</td>
                   </tr>
-                  <!-- Issue 1 -->
-                  <tr class="success" id="issue-three">
-                    <td>2321</td>
-                    <td>Jeff Jung</td>
-                    <td>Alyssa is busy this
-                        weekend...</td>
-                    <td>Nov 10th. 2013</td>
-                    <td>12345678</td>
-                    <td>Alyssa Dunn</td>
-                    <td>Nov 10th. 2013</td>
-                    <td>General</td>
-                  </tr>
-                  <tr class="success" id="issue-four">
-                    <td>2121</td>
-                    <td>Maggie Phan</td>
-                    <td>Ashley didn't do well on lab</td>
-                    <td>Oct 5th. 2013</td>
-                    <td>12345638</td>
-                    <td>Ashley Chen</td>
-                    <td>Nov 10th. 2013</td>
-                    <td>Lab</td>
-                  </tr>
-                </table>
-              </div>
+                  <?php
+				    $filepath = "files/resolved_issues.txt";
+					if (file_exists($filepath)) 
+					{
+						$file = fopen($filepath, 'r');
+						while (!feof($file)) 
+						{
+							$lines = fgets($file);	
+							$first_char = $lines[0];
+							if ($first_char != '*' && $first_char != '^' && trim($lines) != '')
+							{
+													
+								$split = explode('|', $lines);
+								echo '<tr class="success"><td><input type="checkbox"></td>';
+								foreach($split as $line) 
+								{
+									echo '<td>'.$line.'</td>';
+								}
+								echo '</tr>';							
+							}
+						}
+						fclose($file);
+					} 
+				?>
+				</table>
+				</div>
 
               <div class="tab-pane" id="all_tab">
               <table class="table table-hover">
                 <tr class="info">
+				<td><input type="checkbox"></td>
                 <td>Ref#</td>
                 <td>Submitted by</td>
                 <td>Issue Title</td>
@@ -178,48 +182,46 @@
                 <td>Last Activity</td>
                 <td>Label</td>
                 </tr>
-                <!-- Issue 1 -->
-                <tr class="success" id="issue-three">
-                  <td>2321</td>
-                  <td>Jeff Jung</td>
-                  <td>Alyssa is busy this
-                      weekend...</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>12345678</td>
-                  <td>Alyssa Dunn</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>General</td>
-                </tr>
-                <tr class="danger" id="issue-four">                  <td>2121</td>
-                  <td>Maggie Phan</td>
-                  <td>Ashley didn't do well on lab</td>
-                  <td>Oct 5th. 2013</td>
-                  <td>12345638</td>
-                  <td>Ashley Chen</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>Lab</td>
-                </tr>
-                <tr class="success" id="issue-three">
-                  <td>2321</td>
-                  <td>Jeff Jung</td>
-                  <td>Alyssa is busy this
-                      weekend...</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>12345678</td>
-                  <td>Alyssa Dunn</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>General</td>
-                </tr>
-                <tr class="danger" id="issue-four">
-                  <td>2121</td>
-                  <td>Maggie Phan</td>
-                  <td>Ashley didn't do well on lab</td>
-                  <td>Oct 5th. 2013</td>
-                  <td>12345638</td>
-                  <td>Ashley Chen</td>
-                  <td>Nov 10th. 2013</td>
-                  <td>Lab</td>
-                </tr>
+                <?php
+					$unresolved_filepath = "files/unresolved_issues.txt";
+					$resolved_filepath = "files/resolved_issues.txt";
+				    $new_filepath = "files/all_issues.txt";
+					$unresolved_data = file($unresolved_filepath);
+					$resolved_data = file($resolved_filepath);
+					$data = array_merge($unresolved_data, $resolved_data);
+					arsort($data);
+					file_put_contents($new_filepath, implode("\n", $data));
+				
+					if (file_exists($new_filepath)) 
+					{
+						$file = fopen($new_filepath, 'r');
+						while (!feof($file)) 
+						{
+							$lines = fgets($file);	
+							$first_char = $lines[0];
+							if ($first_char != '*' && $first_char != '^' && trim($lines) != '')
+							{													
+								$split = explode('|', $lines);
+								if (in_array($lines, $resolved_data))
+								{
+									echo '<tr class="success"><td><input type="checkbox"></td>';
+								}
+								else
+								{
+									echo '<tr class="danger"><td><input 	type="checkbox"></td>';
+								}
+								
+								foreach($split as $line) 
+								{
+									echo '<td>'.$line.'</td>';
+								}
+								echo '</tr>';		
+								
+							}
+						}
+						fclose($file);
+					} 
+				?>
               </table>
               </div>
             </div>
@@ -313,15 +315,17 @@
 					  <option>Lab3</option>
 					</select>
                   </div>
-                </div>              
+                </div>
+				<div class="row" align="right">
+            <button type="submit" class="btn btn-default">Submit</button> 
+			<button type="reset" class="btn btn-default">Reset</button>
+          </div>
+				</form>
             </div>
           </div>
          
           
-          <div class="row" align="right">
-            <button type="submit" class="btn btn-default">Submit</button> </form>
-			<button type="button" class="btn btn-default">Cancel</button>
-          </div>
+          
         </div>
 
         <div class="tab-pane" id="opened_issue_tab">
@@ -396,7 +400,7 @@
 			<img src="assets/person.png" alt="Meghan Allen">
 			<table>
 				<tr>
-				<td> <font size="1px"><strong>Meghan Allen<strong> </font> &nbsp &nbsp <font color="grey">2 days ago</font></td>
+				<td> <font size="1"><strong>Meghan Allen</strong> </font><font color="gray">2 days ago</font></td>
 				</tr>
 				<tr>
 				<td> Can someone email the student and get them to come to my office next Tuesday?</td>
@@ -408,7 +412,7 @@
 			<img src="assets/person.png" alt="James Bond">
 			<table>
 				<tr>
-				<td> <font size="1px"><strong>James Bond<strong> </font> &nbsp &nbsp <font color="grey">2 hours 12 minutes ago</font></td>
+				<td> <font size="1"><strong>James Bond</strong> </font><font color="gray">2 hours 12 minutes ago</font></td>
 				</tr>
 				<tr>
 				<td> Sure. I just emailed. Will inform you once she reponds.</td>
