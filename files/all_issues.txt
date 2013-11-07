@@ -1,17 +1,16 @@
-2321|Jeff Jung|Alyssa is busy this weekend...|Nov 10. 2013|12345678|Alyssa Dunn|Nov 12. 2013|General
+2321|Jeff Jung|Alyssa is busy this weekend...   |Nov 10. 2013|12345678|Alyssa Dunn |Nov 12. 2013 |General
 
-2128|Maggie Pann|Ashley didn't do well on lab...|Oct 05. 2013|32124342|Ashley Chen|Oct 21. 2013|Lab3
+2128|Maggie Pann|Ashley didn't do well on lab...|Oct 05. 2013|32124342|Ashley Chen |Oct 21. 2013 |Lab3   
 
 2111|Greger Wales|Tommy's team didn't do...|Nov 04. 2013|53212178|Tommy Nan|Nov 12. 2013|Lab1
 
 2003|Joan McGray|The mark seemed unfair to...|Oct 05. 2013|32124342|Ashley Chen|Oct 21. 2013|Midterm1
 
-1929|Meghan Poo|Vincent cheated on last...|Sept 15. 2013|23737891|Vincent Chiu|sept 05. 2013|General
+1929|Meghan Poo|Vincent cheated on last...      |Sep 15. 2013|23737891|Vincent Chiu|sept 05. 2013|General
 
 1667|Meghan Poo|Vincent wanted to cancel...|Sept 15. 2013|23738321|Vincent Chiu|sept 05. 2013|General
 
-1662|Mike Kwan|John reported that there ...|May 27. 2013|71822562|John Leung|June 07. 2013|Q1
-
+1662|Mike Kwan|John reported that there ...     |May 27. 2013|71822562|John Leung  |June 07. 2013|Q1     
 1342|Mike Kwan|Winnie the pooh has...|May 27. 2013|32124342|Phoa Leung|June 07. 2013|Lab2
 
 1329|Maggie Pann|Ashley didn't do well on lab...|April 12. 2013|32124342|Ashley Chen|May 21. 2013|Lab2
@@ -19,5 +18,3 @@
 1277|Meghan Poo|Vincent cheated on last...|March 25. 2013|45737891|Vincent Chiu|June 01. 2013|General
 
 1193|Mike Kwan|John reported that there ...|Jan 29. 2013|41822562|John Leung|June 07. 2013|Q3
-
-

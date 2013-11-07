@@ -11,6 +11,7 @@
  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css" type="text/css">
  <link rel="stylesheet" href="css/app.css" type="text/css">
  <script src="vendor/modernizr.js" type="text/javascript"></script>
+ 
 </head>
 
 <body>
@@ -54,6 +55,7 @@
      </div>
     </form>
    </div>
+   
    <!--Issues Page-->
    <div class="tab-pane active" id="issues_tab">
     <div class="panel-heading" align="center">
@@ -68,8 +70,8 @@
      </div>
     </form>
 
-    <div class="container">
-     <div class="row" id="sort-issues">
+    <div class="container" id="issuesTabContainer">
+     <div class="row" id="issuesTabContent">
       <ul class="nav nav-pills col-md-10" style="margin-bottom:0px">
        <li class="active left">
         <a href="#unresolved_tab" data-toggle="tab">Unresolved</a>
@@ -84,14 +86,14 @@
        </li>
       </ul>
 	  
-      <button type="button" class="btn btn-default col-md-2" style="float:right;margin-bottom:0px; margin-top:5px">Mark As Resolved
+      <button type="button" class="btn btn-default col-md-2" style="float:right;margin-bottom:0px; margin-top:5px" onclick="updateIssuesTable()">Mark As Resolved
 	  </button>
      </div>
 
 
      <div class="tab-content">
       <div class="tab-pane active" id="unresolved_tab">
-       <table class="table table-hover table-striped">
+       <table class="table table-hover table-striped" id="unresolved_tab_table">
         <tr class="info">
          <td>
           <input type="checkbox">
@@ -105,31 +107,12 @@
          <td>Last Activity</td>
          <td>Label</td>
         </tr>
-        <?php $filepath="files/unresolved_issues.txt" ; 
-			if (file_exists($filepath)) 
-			{ 
-				$file=fopen($filepath, 'r'); 
-				while (!feof($file)) 
-				{ 
-					$lines=fgets($file); $first_char=$lines[0]; 
-					if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-					{ 
-						$split=explode( '|', $lines); 
-						echo '<tr class="danger"><td><input type="checkbox"></td>'; 
-						foreach($split as $line) 
-						{ 
-							echo '<td>'.$line. '</td>'; 
-						} 
-						echo '</tr>'; 
-					} 
-				} fclose($file); 
-			} 
-		?>
+        <?php include("populateUnresolvedIssues.php"); ?> 
        </table>
       </div>
 
       <div class="tab-pane" id="resolved_tab">
-       <table class="table table-hover table-striped">
+       <table class="table table-hover table-striped" id="resolved_tab_table">
         <tr class="info">
          <td>
           <input type="checkbox">
@@ -143,31 +126,12 @@
          <td>Last Activity</td>
          <td>Label</td>
         </tr>
-		<?php $filepath="files/resolved_issues.txt" ; 
-			if (file_exists($filepath)) 
-			{ 
-				$file=fopen($filepath, 'r'); 
-				while (!feof($file)) 
-				{ 
-					$lines=fgets($file); $first_char=$lines[0]; 
-					if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-					{ 
-						$split=explode( '|', $lines); 
-						echo '<tr class="success"><td><input type="checkbox"></td>'; 
-						foreach($split as $line) 
-						{ 
-							echo '<td>'.$line. '</td>'; 
-						} 
-						echo '</tr>'; 
-					} 
-				} fclose($file); 
-			} 
-		?>
+		<?php include("populateResolvedIssues.php"); ?> 
        </table>
       </div>
 
       <div class="tab-pane" id="all_tab">
-       <table class="table table-hover table-striped">
+       <table class="table table-hover table-striped"  id="all_tab_table">
         <tr class="info">
          <td>
           <input type="checkbox">
@@ -181,43 +145,7 @@
          <td>Last Activity</td>
          <td>Label</td>
         </tr>
-        <?php 
-			$unresolved_filepath="files/unresolved_issues.txt"; 
-			$resolved_filepath="files/resolved_issues.txt"; 
-			$new_filepath="files/all_issues.txt"; 
-			$unresolved_data=file($unresolved_filepath);
-			$resolved_data=file($resolved_filepath); 
-			$data=array_merge($unresolved_data,$resolved_data); 
-			arsort($data); 
-			file_put_contents($new_filepath, implode("\n", $data)); 
-			if (file_exists($new_filepath)) 
-			{ 
-				$file=fopen($new_filepath,'r'); 
-				while (!feof($file)) 
-				{ 
-					$lines=fgets($file); 
-					$first_char=$lines[0];
-					if ($first_char !='*' && $first_char !='^' && trim($lines) !='' ) 
-					{ 
-						$split=explode( '|', $lines); 
-						if (in_array($lines, $resolved_data)) 
-						{ 
-							echo '<tr class="success"><td><input type="checkbox"></td>'; 
-						} 
-						else 
-						{ 
-							echo '<tr class="danger"><td><input type="checkbox"></td>';
-						} 
-						foreach($split as $line) 
-						{ 
-							echo '<td>'.$line. '</td>'; 
-						} 
-						echo '</tr>';
-					} 
-				} 
-				fclose($file); 
-			} 
-		?>
+        <?php include("populateAllIssues.php"); ?>
        </table>
       </div>
      </div>
