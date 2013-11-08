@@ -42,8 +42,8 @@
       </p>
 	  <p>
         Resolved by 
-        <?php echo $assignment. "<br>"; ?>
-        on Oct 19th 2013 7:13am
+        <?php echo $assignment; ?>
+         on Oct 19th 2013 7:13am
       </p>
       <p>
        Assigned to
