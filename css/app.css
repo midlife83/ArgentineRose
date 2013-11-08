@@ -65,3 +65,8 @@ img
 float:left;
 padding-right:10px;
 }
+
+.student-list {
+  max-height:500px; 
+  overflow:scroll;
+}

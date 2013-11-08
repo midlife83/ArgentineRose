@@ -54,7 +54,27 @@
       </div>
      </div>
     </form>
-    <div class="col-lg-2" style="border: 2px solid black">Student list</div>
+    <div class="col-lg-2" >
+      <div class="list-group student-list">
+        <a href="#" class="list-group-item active">Cras justo odio</a>
+        <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
+        <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
+                <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+                <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
+      </div>
+    </div>
 <div class="col-lg-8" style="border: 2px solid red">Student Profile</div>
 <div class="col-lg-2" style="border: 2px solid yellow">Sidebar</div>
    </div>
