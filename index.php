@@ -202,7 +202,7 @@
        <div class="form-group">
         <label for="studentNumber" class="col-sm-2 control-label">Student Number</label>
         <div class="col-sm-4">
-         <input type="number" class="form-control" id="studentNumber" maxlength="8" name="studentNumber"
+         <input type="text" class="form-control" id="studentNumber" maxlength="8" name="studentNumber"
          placeholder="Student Number">
         </div>
        </div>

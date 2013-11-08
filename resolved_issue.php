@@ -41,7 +41,9 @@
 		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
       </p>
 	  <p>
-        Resolved by Alyssa Dunn on Oct 19th 2013 7:13am
+        Resolved by 
+        <?php echo $assignment. "<br>"; ?>
+        on Oct 19th 2013 7:13am
       </p>
       <p>
        Assigned to
