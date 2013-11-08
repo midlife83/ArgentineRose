@@ -23,9 +23,12 @@
 		 $number=$_SESSION['number'];
 		 $section=$_SESSION['section']; 
 		 $title=$_SESSION['title']; 
+		 $description=$_SESSION['description']; 
+		 $assignment=$_SESSION['assignment']; 
+		 $label=$_SESSION['label']; 
 	?>
     <h2 style="margin:0px">
-     Resolve An Issue
+     Resolve An Issue: Issue# 37 <?php echo $title; ?>
     </h2>
    </div>
 
@@ -33,33 +36,55 @@
     
     <form class="form-horizontal" role="form" method="POST" action="resolved_issue.php">
 
-    <div class="form-group">
-     <label for="title" class="col-sm-2 control-label">Issue Title</label>
-     <div class="col-sm-3" style="margin-top:7px">
-      <?php echo $title; ?>
+    
+
+    <div class="row">
+     <div class="col-md-8">	
+	  <p>
+		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
+      </p>
+	 
+      <p>
+       Assigned to
+       <?php echo $assignment. "<br>"; ?>
+      </p>
+
+      <p>
+       Labels: #
+       <?php echo $label. "<br>"; ?>
+      </p>
+
+      <h3>
+       Status:
+       <font color="red">Unresolved</font>
+      </h3>
+     </div>
+
+     <div class="col-md-4">
+      <p>
+       Student Name:
+       <?php echo $name. "<br>"; ?>
+      </p>
+
+      <p>
+       Student Number:
+       <?php echo $number. "<br>"; ?>
+      </p>
+
+      <p>
+       Section:
+       <?php echo $section. "<br>"; ?>
+      </p>
      </div>
     </div>
 
-    <div class="form-group">
-     <label for="studentName" class="col-sm-2 control-label">Student Name</label>
-     <div class="col-sm-3" style="margin-top:7px">
-      <?php echo $name; ?>
-     </div>
-    </div>
+	<h4 style="margin-top:0px">
+      Description:
+     </h4>
 
-    <div class="form-group">
-     <label for="studentNumber" class="col-sm-2 control-label">Student Number</label>
-     <div class="col-sm-3" style="margin-top:7px">
-      <?php echo $number; ?>
-     </div>
-    </div>
-
-    <div class="form-group">
-     <label for="section" class="col-sm-2 control-label">Section</label>
-     <div class="col-sm-3" style="margin-top:7px">
-      <?php echo $section; ?>
-     </div>
-    </div>
+     <p>
+      <?php echo $description. "<br>"; ?>
+     </p>
 
     <hr>
 
@@ -71,7 +96,7 @@
     </div>
 	
 	<div class="row" align="right">	
-		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px" onclick="history.back();"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
+		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px" onclick="window.close();"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
 		<button type="submit" class="btn btn-default" style="float:right; margin-bottom:0px"><span class="glyphicon glyphicon-ok-sign"></span> Resolve</button>
 		
 	</div>
