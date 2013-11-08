@@ -54,6 +54,9 @@
       </div>
      </div>
     </form>
+    <div class="col-lg-2" style="border: 2px solid black">Student list</div>
+<div class="col-lg-8" style="border: 2px solid red">Student Profile</div>
+<div class="col-lg-2" style="border: 2px solid yellow">Sidebar</div>
    </div>
    
    <!--Issues Page-->
