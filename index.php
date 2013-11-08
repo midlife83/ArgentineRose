@@ -32,11 +32,6 @@
      <a href="#report_issues_tab" data-toggle="tab">Report An Issue</a>
     </li>
 
-    <!--
-          <li class="right">
-            <a href="#opened_issue_tab" data-toggle="tab">Issue# 34</a>
-          </li>
-		  -->
    </ul>
   </div>
 
@@ -294,119 +289,6 @@
    </div>
 	</form>
    </div>
-   
-<!--
-   <div class="tab-pane" id="opened_issue_tab">
-    <h1>
-     Issue #37: 0/10 on quiz, 2/10 on lab 3
-    </h1>
-
-    <p>
-     Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
-    </p>
-
-    <div class="row">
-     <div class="col-md-8">
-      <p>
-       This project uses
-      </p>
-
-      <p>
-       Assigned to Alyssa Dunn
-      </p>
-
-      <p>
-       Labels: #Quiz
-      </p>
-
-      <h3>
-       Status: Unresolved
-      </h3>
-     </div>
-
-     <div class="col-md-4">
-      <p>
-       Student Name: Jeff Jung
-      </p>
-
-      <p>
-       Student Number: 12345678
-      </p>
-
-      <p>
-       Section: CSPC 110 - 101
-      </p>
-     </div>
-    </div>
-
-    <br>
-    <div class="btn-group">
-     <button type="button" class="btn btn-default">Edit</button>
-     <button type="button" class="btn btn-default">Follow</button>
-     <button type="button" class="btn btn-default">Delete</button>
-     <button type="button" class="btn btn-default">Resolve</button>
-    </div>
-
-    <hr>
-
-    <div class="container">
-     <h3>
-      Description:
-     </h3>
-
-     <p>
-      Lots of text can go here to describe the student issues.Lots of text can go here
-      to describe the student issues.Lots of text can go here to describe the student
-      issues.Lots of text can go here to describe the student issues.Lots of text
-      can go here to describe the student issues. Lots of text can go here to describe
-      the student issues.Lots of text can go here to describe the student issues.
-     </p>
-     <br>
-
-     <h3>
-      Comments:
-     </h3>
-
-     <img src="assets/person.png" alt="Meghan Allen">
-     <table>
-      <tr>
-       <td>
-        <font size="1">
-         <strong>Meghan Allen</strong>
-        </font>
-        <font color="gray">2 days ago</font>
-       </td>
-      </tr>
-      <tr>
-       <td>Can someone email the student and get them to come to my office next Tuesday?</td>
-      </tr>
-     </table>
-
-     <hr size="0" width="50%" align="left">
-
-     <img src="assets/person.png" alt="James Bond">
-     <table>
-      <tr>
-       <td>
-        <font size="1">
-         <strong>James Bond</strong>
-        </font>
-        <font color="gray">2 hours 12 minutes ago</font>
-       </td>
-      </tr>
-      <tr>
-       <td>Sure. I just emailed. Will inform you once she reponds.</td>
-      </tr>
-     </table>
-
-     <div class="row" align="right">
-      <button type="button" class="btn btn-default">&#43; Comment</button>
-     </div>
-
-    </div>	
-	
-   </div>
-   -->
    
   </div>
   <!-- Put your js down here -->
