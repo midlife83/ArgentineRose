@@ -14,7 +14,7 @@
 </head>
 
 <body>
- <div class="container" style="margin-top:10px">
+ <div class="container" style="margin-top:10px; width:70%">
   <div class="panel panel-primary">
    <div class="panel-heading">
     <?php session_start(); 
@@ -40,12 +40,13 @@
    </div>
 
    <div class="panel-body" id="opened_issue_tab">
-    <p>
-     Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
-    </p>
-
+    
     <div class="row">
      <div class="col-md-8">
+	  <p>
+		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
+      </p>
+	 
       <p>
        Assigned to
        <?php echo $assignment. "<br>"; ?>
@@ -90,7 +91,7 @@
     <hr>
 
     <div class="container">
-     <h3>
+     <h3 style="margin-top:0px">
       Description:
      </h3>
 
@@ -139,8 +140,9 @@
        </td>
       </tr>
      </table>
-     <button type="button" class="btn btn-default" style="float:right">+ Comment</button>
+     
     </div>
+	<button type="button" class="btn btn-default" style="float:right"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
    </div>
   </div>
  </div>
