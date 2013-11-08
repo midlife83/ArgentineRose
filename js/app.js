@@ -62,6 +62,8 @@ function updateIssuesTable()
 	{
 		updateAllIssueTable();
 	}
+	
+	
 }
 
 function updateAllIssueTable()
@@ -69,6 +71,7 @@ function updateAllIssueTable()
 	var unresolvedTable = document.getElementById("unresolved_tab_table");
 	var resolvedTable = document.getElementById("resolved_tab_table");
 	var allIssuesTable = document.getElementById("all_tab_table");
+		
 	var tableRows = allIssuesTable.rows;
 	var x = tableRows.length;		
 	var row, cells;
@@ -82,7 +85,7 @@ function updateAllIssueTable()
 			{
 				if (unresolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
 				{
-					unresolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					unresolvedTable.rows[j].cells[0].firstChild.checked = true;
 					j = unresolvedTable.rows.length;
 				}
 			}
@@ -91,18 +94,18 @@ function updateAllIssueTable()
 			{
 				if (resolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
 				{
-					resolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					resolvedTable.rows[j].cells[0].firstChild.checked = true;
 					j = resolvedTable.rows.length;
 				}
 			}
 			
 			row.className='success';
-			row.cells[0].childNodes[0].checked = false;
+			row.cells[0].firstChild.checked = false;
 			
 			updateUnresolvedIssueTable();
 			updateResolvedIssueTable();
 		}
-	}
+	}		
 }
 
 function updateUnresolvedIssueTable()
@@ -113,7 +116,8 @@ function updateUnresolvedIssueTable()
 	var tableRows = currentTable.rows;
 	var x = tableRows.length;		
 	var row, cells;
-	for (var i = 0; i < x; i++) 
+	
+	for (var i = 1; i < x; i++) 
 	{
 		row = tableRows[i];
 		cells = row.cells;			
@@ -121,14 +125,14 @@ function updateUnresolvedIssueTable()
 		{				
 			var clone = row.cloneNode(true);
 			clone.className='success';
-			clone.cells[0].childNodes[0].checked = false;
-			var parentN = targetTable.rows[1].parentNode;
-			parentN.insertBefore(clone, targetTable.rows[1]);				
+			clone.cells[0].firstChild.checked = false;
+			var parentN = targetTable.rows[0].parentNode;		
+			parentN.appendChild(clone);
 			currentTable.deleteRow(i);				
 			i--;
 			x--;
 			
-			for (var r = 0, n = allIssuesTable.rows.length; r < n; r++) {
+			for (var r = 1, n = allIssuesTable.rows.length; r < n; r++) {
 				if(allIssuesTable.rows[r].cells[1].childNodes[0].nodeValue == clone.cells[1].childNodes[0].nodeValue)
 				{
 					allIssuesTable.rows[r].className = 'success';
@@ -136,6 +140,7 @@ function updateUnresolvedIssueTable()
 			}
 		}
 	}
+		
 }
 
 function updateResolvedIssueTable()
@@ -146,7 +151,8 @@ function updateResolvedIssueTable()
 	var tableRows = currentTable.rows;
 	var x = tableRows.length;		
 	var row, cells;
-	for (var i = 0; i < x; i++) 
+	
+	for (var i = 1; i < x; i++) 
 	{
 		row = tableRows[i];
 		cells = row.cells;			
@@ -154,14 +160,14 @@ function updateResolvedIssueTable()
 		{				
 			var clone = row.cloneNode(true);
 			clone.className='danger';
-			clone.cells[0].childNodes[0].checked = false;
-			var parentN = targetTable.rows[1].parentNode;
-			parentN.insertBefore(clone, targetTable.rows[1]);				
+			clone.cells[0].firstChild.checked = false;
+			var parentN = targetTable.rows[0].parentNode;	
+			parentN.appendChild(clone);			
 			currentTable.deleteRow(i);				
 			i--;
 			x--;
 			
-			for (var r = 0, n = allIssuesTable.rows.length; r < n; r++) {
+			for (var r = 1, n = allIssuesTable.rows.length; r < n; r++) {
 				if(allIssuesTable.rows[r].cells[1].childNodes[0].nodeValue == clone.cells[1].childNodes[0].nodeValue)
 				{
 					allIssuesTable.rows[r].className = 'danger';
@@ -169,4 +175,6 @@ function updateResolvedIssueTable()
 			}
 		}
 	}
+	
+			
 }

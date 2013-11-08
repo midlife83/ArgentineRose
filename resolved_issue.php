@@ -85,7 +85,8 @@
 
     <div class="container">     
 
-	 <div class="col-sm-6" style="padding:0px">
+	<div class="row" style="margin-left:0px">
+	 <div class="col-sm-4" style="padding:0px">
 		 <h3 style="margin-top:0px; margin-left:0px">
 		  Description:
 		 </h3>
@@ -93,7 +94,6 @@
 		  <?php echo $description. "<br>"; ?>
 		 </p>
 	 </div>
-	 <br>
 	 <div class="col-sm-6" style="padding:0px">
 		 <h3 style="margin-top:0px; margin-left:0px">
 		  Solution:
@@ -102,7 +102,8 @@
 		  <?php echo $solution. "<br>"; ?>
 		 </p>
 	 </div>
-	 <br>
+	</div>
+	<br>
 
      <h3>
       Comments:
