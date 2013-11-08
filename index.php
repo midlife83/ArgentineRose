@@ -75,9 +75,18 @@
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-<div class="col-lg-8" style="border: 2px solid red">Student Profile</div>
-<div class="col-lg-2" style="border: 2px solid yellow">Sidebar</div>
-   </div>
+    <div class="col-lg-8">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Student Name</h3>
+        </div>
+        <div class="panel-body">
+          Student Info Here
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2" style="border: 2px solid yellow">Sidebar</div>
+  </div>
    
    <!--Issues Page-->
    <div class="tab-pane active" id="issues_tab">
