@@ -53,14 +53,17 @@ function updateIssuesTable()
 	if (text=="unresolved_tab")
 	{
 		updateUnresolvedIssueTable();
+		document.getElementById("unresolved_table_checkbox").checked = false;
 	}
 	else if (text=="resolved_tab")
 	{
 		updateResolvedIssueTable();
+		document.getElementById("resolved_table_checkbox").checked = false;
 	}
 	else
 	{
 		updateAllIssueTable();
+		document.getElementById("all_table_checkbox").checked = false;
 	}
 	
 	

@@ -71,7 +71,7 @@
     </div>
 	
 	<div class="row" align="right">	
-		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
+		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px" onclick="history.back();"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
 		<button type="submit" class="btn btn-default" style="float:right; margin-bottom:0px"><span class="glyphicon glyphicon-ok-sign"></span> Resolve</button>
 		
 	</div>
