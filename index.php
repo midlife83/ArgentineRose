@@ -49,7 +49,7 @@
       </div>
      </div>
     </form>
-    <div class="col-lg-2" >
+    <div class="col-sm-2" >
       <div class="list-group student-list">
         <a href="#" class="list-group-item active">Cras justo odio</a>
         <a href="#" class="list-group-item">Dapibus ac facilis</a>
@@ -70,17 +70,48 @@
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="col-lg-8">
+    <div class="col-sm-8">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Student Name</h3>
+          <h3 class="panel-title">Alyssa Dunn</h3>
         </div>
         <div class="panel-body">
-          Student Info Here
+          <div class="row">
+            <div class="col-sm-2">
+                <img src="assets/person.png">
+            </div>
+            <div class="col-sm-6">
+              <h4>Name: Alyssa Dunn</h4>
+              <h5>Student No: 12345678</h5>
+            </div>
+          </div>
+          <div class="row">
+            <table class="grades table table-bordered">
+              <tr class="info">
+               <td>Lab 1</td>
+               <td>Quiz 1</td>
+               <td>Lab 2</td>
+               <td>Lab 3</td>
+               <td>MT 1</td>
+               <td>Lab 4</td>
+               <td>Quiz 2</td>
+               <td>MT 2</td>
+              </tr>
+              <tr>
+              <td>70%</td>
+              <td>66%</td>
+              <td>50%</td>
+              <td>60%</td>
+              <td class="danger">33%</td>
+              <td class="danger">30%</td>
+              <td>60%</td>
+              <td>60%</td>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-2" style="border: 2px solid yellow">Sidebar</div>
+    <div class="col-sm-2" style="border: 2px solid yellow">Sidebar</div>
   </div>
    
    <!--Issues Page-->
