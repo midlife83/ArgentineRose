@@ -51,8 +51,8 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list">
-        <a href="#" class="list-group-item active">Dunn, Alyssa</a>
-        <a href="#" class="list-group-item">Jung, Jeff</a>
+        <a href="#alyssa" class="list-group-item" data-toggle="tab">Dunn, Alyssa</a>
+        <a href="#" class="list-group-item active">Jung, Jeff</a>
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
         <a href="#" class="list-group-item">Vestibulum</a>
@@ -60,9 +60,17 @@
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
         <a href="#" class="list-group-item">Vestibulum</a>
+                <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+                <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac cons</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
+        <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="col-sm-8 tab-pane" id="alyssa">
+    <div class="alyssa col-sm-8">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
@@ -77,9 +85,7 @@
               <h5>Student No: 12345678</h5>
             </div>
           </div>
-          <div class="row" style="padding-top:30px">
-
-          <h4 style="padding-left:15px">Grades</h4>
+          <div class="row">
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
@@ -106,44 +112,40 @@
           <div class="row student-issue-sort">
            <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
             <li class="active left">
-             <a href="#unresolved_tab" data-toggle="tab">Unresolved</a>
+             <a href="#unresolved_tab_student" data-toggle="tab">Unresolved</a>
             </li>
 
             <li class="left">
-             <a href="#resolved_tab" data-toggle="tab">Resolved</a>
-            </li>
-
-            <li class="left">
-             <a href="#all_tab" data-toggle="tab">All</a>
+             <a href="#resolved_tab_student" data-toggle="tab">Resolved</a>
             </li>
            </ul>
           </div>
-               <div class="tab-content" id="studentTabContent">
-                <div class="tab-pane active" id="unresolved_tab">
-                 <table class="table table-hover table-striped" id="unresolved_tab_table">
+              <div class="tab-content" id="studentTabContent">
+                <div class="tab-pane active" id="unresolved_tab_student">
+                 <table class="table table-hover table-striped" id="unresolved_tab_table_student">
                   <tr class="info">
                   <td>
-                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
+                   <input type="checkbox">
                   </td>
                    <td>Ref#</td>
                    <td>Submitted by</td>
                    <td>Issue Title</td>
                    <td>Date Submitted</td>
                    <td>Student #</td>
-                   <td>Student Name</td>
+                    <td>Student Name</td>
                    <td>Last Activity</td>
                    <td>Label</td>
                   </tr>
                   <?php include("populateUnresolvedIssues.php"); ?> 
                  </table>
                <p style="display: none">unresolved_tab</p>
-                </div>
+              </div>
 
-                <div class="tab-pane" id="resolved_tab">
-                 <table class="table table-hover table-striped" id="resolved_tab_table">
+                <div class="tab-pane" id="resolved_tab_student">
+                 <table class="table table-hover table-striped" id="resolved_tab_table_student">
                   <tr class="info">
                   <td>
-                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
+                   <input type="checkbox">
                   </td>
                    <td>Ref#</td>
                    <td>Submitted by</td>
@@ -158,26 +160,8 @@
                  </table>
                <p style="display: none">resolved_tab</p>
                 </div>
-
-                <div class="tab-pane" id="all_tab">
-                 <table class="table table-hover table-striped"  id="all_tab_table">
-                  <tr class="info">
-                  <td>
-                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
-                  </td>
-                   <td>Ref#</td>
-                   <td>Submitted by</td>
-                   <td>Issue Title</td>
-                   <td>Date Submitted</td>
-                   <td>Student #</td>
-                   <td>Student Name</td>
-                   <td>Last Activity</td>
-                   <td>Label</td>
-                  </tr>
-                  <?php include("populateAllIssues.php"); ?>
-                 </table>
-                </div>
                </div>
+
         </div>
       </div>
     </div>
