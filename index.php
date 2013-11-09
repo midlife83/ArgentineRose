@@ -100,6 +100,81 @@
               <td>60%</td>
             </table>
           </div>
+          <div class="row student-issue-sort">
+           <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
+            <li class="active left">
+             <a href="#unresolved_tab" data-toggle="tab">Unresolved</a>
+            </li>
+
+            <li class="left">
+             <a href="#resolved_tab" data-toggle="tab">Resolved</a>
+            </li>
+
+            <li class="left">
+             <a href="#all_tab" data-toggle="tab">All</a>
+            </li>
+           </ul>
+          </div>
+               <div class="tab-content" id="studentTabContent">
+                <div class="tab-pane active" id="unresolved_tab">
+                 <table class="table table-hover table-striped" id="unresolved_tab_table">
+                  <tr class="info">
+                  <td>
+                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
+                  </td>
+                   <td>Ref#</td>
+                   <td>Submitted by</td>
+                   <td>Issue Title</td>
+                   <td>Date Submitted</td>
+                   <td>Student #</td>
+                   <td>Student Name</td>
+                   <td>Last Activity</td>
+                   <td>Label</td>
+                  </tr>
+                  <?php include("populateUnresolvedIssues.php"); ?> 
+                 </table>
+               <p style="display: none">unresolved_tab</p>
+                </div>
+
+                <div class="tab-pane" id="resolved_tab">
+                 <table class="table table-hover table-striped" id="resolved_tab_table">
+                  <tr class="info">
+                  <td>
+                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
+                  </td>
+                   <td>Ref#</td>
+                   <td>Submitted by</td>
+                   <td>Issue Title</td>
+                   <td>Date Submitted</td>
+                   <td>Student #</td>
+                   <td>Student Name</td>
+                   <td>Last Activity</td>
+                   <td>Label</td>
+                  </tr>
+              <?php include("populateResolvedIssues.php"); ?> 
+                 </table>
+               <p style="display: none">resolved_tab</p>
+                </div>
+
+                <div class="tab-pane" id="all_tab">
+                 <table class="table table-hover table-striped"  id="all_tab_table">
+                  <tr class="info">
+                  <td>
+                   <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">
+                  </td>
+                   <td>Ref#</td>
+                   <td>Submitted by</td>
+                   <td>Issue Title</td>
+                   <td>Date Submitted</td>
+                   <td>Student #</td>
+                   <td>Student Name</td>
+                   <td>Last Activity</td>
+                   <td>Label</td>
+                  </tr>
+                  <?php include("populateAllIssues.php"); ?>
+                 </table>
+                </div>
+               </div>
         </div>
       </div>
     </div>

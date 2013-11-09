@@ -70,6 +70,9 @@ padding-right:10px;
   max-height:500px; 
   overflow:scroll;
 }
+.student-issue-sort {
+  padding-left:15px;
+}
 
 .grades {
   text-align: center;
