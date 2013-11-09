@@ -51,26 +51,18 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list">
-        <a href="#" class="list-group-item active">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilis</a>
+        <a href="#" class="list-group-item active">Dunn, Alyssa</a>
+        <a href="#" class="list-group-item">Jung, Jeff</a>
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
         <a href="#" class="list-group-item">Vestibulum</a>
         <a href="#" class="list-group-item">Dapibus ac facilis</a>
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
-                <a href="#" class="list-group-item">Dapibus ac facilis</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-                <a href="#" class="list-group-item">Dapibus ac facilis</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8 tab-pane" id="alyssa">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
@@ -86,7 +78,7 @@
             </div>
           </div>
           <div class="row">
-            <table class="grades table table-bordered">
+            <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
                <td>Quiz 1</td>

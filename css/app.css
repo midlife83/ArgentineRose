@@ -70,3 +70,7 @@ padding-right:10px;
   max-height:500px; 
   overflow:scroll;
 }
+
+.grades {
+  text-align: center;
+}
