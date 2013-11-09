@@ -31,8 +31,44 @@
     <li class="left">
      <a href="#report_issues_tab" data-toggle="tab">Report An Issue</a>
     </li>
+	
+	<li class="right" style="width:300px; text-align:center">
+	<a href="#" id="recentActivityPopOver" rel="popover" data-original-title="Recent Activities">Recent Activities</a>
+	</li>
 
    </ul>
+  </div>
+  
+  <div id="recentActivity_popover_content_wrapper" style="display: none">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">just now</font></span>
+					<font size="1">Mike updated Issue #3252</font>
+                  </a>
+                  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">23 mins ago</font></span>
+					<font size="1">Julie commneted on Issue #2212</font>
+                  </a>
+				  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">48 mins ago</font></span>
+					<font size="1">Ashley resolved Issue #1789</font>
+                  </a>
+				  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">1 hour ago</font></span>
+					<font size="1">Tom created Issue #4912</font>
+                  </a>
+				  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">just now</font></span>
+					<font size="1">Joseph edited Issue #2732</font>
+                  </a>
+				  <a href="#" class="list-group-item">
+					<span class="badge pull-right"><font size="1">just now</font></span>
+					<font size="1">Michael resolved Issue #1821</font>
+                  </a>
+                </div>
+                <div class="text-right">
+                  <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
   </div>
 
   <!-- STUDENTS PAGE-->
@@ -70,7 +106,7 @@
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="alyssa col-sm-8">
+    <div class="alyssa col-sm-10">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
@@ -164,8 +200,7 @@
 
         </div>
       </div>
-    </div>
-    <div class="col-sm-2" style="border: 2px solid yellow">Sidebar</div>
+    </div>    
   </div>
    
    <!--Issues Page-->
@@ -379,10 +414,17 @@
   <!-- Put your js down here -->
   <script src="vendor/jquery.js" type="text/javascript">
   </script>
-  <script src="vendor/bootstrap/js/bootstrap.js" type="text/javascript">
-  </script>
-  <script src="js/app.js" type="text/javascript">
-  </script>
+  <script src="vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script>  
+	$(function ()  
+	{ 
+		$("#recentActivityPopOver").popover({placement:'bottom', trigger: 'click', html:true,
+		content: function() {
+          return $('#recentActivity_popover_content_wrapper').html();
+        }});  
+	});  
+  </script>  
  </div>
 </body>
 
