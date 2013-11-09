@@ -77,7 +77,9 @@
               <h5>Student No: 12345678</h5>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="padding-top:30px">
+
+          <h4 style="padding-left:15px">Grades</h4>
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
@@ -100,6 +102,7 @@
               <td>60%</td>
             </table>
           </div>
+          <h4>Issue History</h4>
           <div class="row student-issue-sort">
            <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
             <li class="active left">
