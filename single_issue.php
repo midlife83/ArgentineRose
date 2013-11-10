@@ -103,47 +103,33 @@
      <h3>
       Comments:
      </h3>
-     <img src="assets/person.png" alt="Meghan Allen">
+  	 <img src="assets/person.png" alt="James Bond">
      <table>
       <tr>
-       <td>
-        <font size="1">
-         <strong>Meghan Allen</strong>
+       <td width="730"><strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong>
         </font>
-        <font color="gray">2 days ago</font>
+        <font color="gray">
+        </font>
        </td>
-      </tr>
-
+      </tr>   
+      
+	<form class="form-horizontal" role="form" method="POST" action="single_issue.php">
+            
       <tr>
        <td>
-        Can someone email the student and get them to come to my office next Tuesday?
-       </td>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
+        </div>
+</td>
       </tr>
+
+<tr>   
+<td align="right">          
+	<button type="submit" class="btn btn-default">Comment</button>
+    </form>
+    <td>
+    </tr>
      </table>
-
-     <hr size="0" width="50%" align="left">
-     <img src="assets/person.png" alt="James Bond">
-     <table>
-      <tr>
-       <td>
-        <font size="1">
-         <strong>James Bond</strong>
-        </font>
-        <font color="gray">2 hours 12 minutes ago
-        </font>
-       </td>
-      </tr>
-
-      <tr>
-       <td>
-        Sure. I just emailed. Will inform you once she reponds.
-       </td>
-      </tr>
-     </table>
-     
-    </div>
-	<button type="button" class="btn btn-default" style="float:right"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-   </div>
   </div>
  </div>
 </body>
