@@ -87,8 +87,8 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list">
-        <a href="#alyssa" class="list-group-item" data-toggle="tab">Dunn, Alyssa</a>
-        <a href="#" class="list-group-item active">Jung, Jeff</a>
+        <a id="alyssa" class="list-group-item active">Dunn, Alyssa</a>
+        <a id="jeff" class="list-group-item" onclick="showAlyssa()">Jung, Jeff</a>
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
         <a href="#" class="list-group-item">Vestibulum</a>
@@ -106,7 +106,7 @@
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="alyssa col-sm-10">
+    <div class="alyssa col-sm-10" id="student-area">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
@@ -122,6 +122,7 @@
             </div>
           </div>
           <div class="row">
+
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
@@ -160,9 +161,6 @@
                 <div class="tab-pane active" id="unresolved_tab_student">
                  <table class="table table-hover table-striped" id="unresolved_tab_table_student">
                   <tr class="info">
-                  <td>
-                   <input type="checkbox">
-                  </td>
                    <td>Ref#</td>
                    <td>Submitted by</td>
                    <td>Issue Title</td>
@@ -172,7 +170,30 @@
                    <td>Last Activity</td>
                    <td>Label</td>
                   </tr>
-                  <?php include("populateUnresolvedIssues.php"); ?> 
+                  <?php $filepath="files/unresolved_issues.txt" ; 
+                        if (file_exists($filepath)) 
+                        { 
+                          $file=fopen($filepath, 'r'); 
+                          while (!feof($file)) 
+                          { 
+                            $lines=fgets($file); 
+                            $first_char=$lines[0];
+                            if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
+                            { 
+                              $split=explode( '|', $lines);
+                              $name = str_replace(' ', '', $split[5]);
+                                if ($name=='AlyssaDunn') { 
+                                echo '<tr class="danger">'; 
+                                foreach($split as $line) 
+                                { 
+                                  echo '<td>'.$line. '</td>';
+                                } 
+                                echo '</tr>'; 
+                              }
+                            } 
+                          } fclose($file); 
+                        } 
+                  ?>
                  </table>
                <p style="display: none">unresolved_tab</p>
               </div>
@@ -180,9 +201,6 @@
                 <div class="tab-pane" id="resolved_tab_student">
                  <table class="table table-hover table-striped" id="resolved_tab_table_student">
                   <tr class="info">
-                  <td>
-                   <input type="checkbox">
-                  </td>
                    <td>Ref#</td>
                    <td>Submitted by</td>
                    <td>Issue Title</td>
@@ -192,12 +210,34 @@
                    <td>Last Activity</td>
                    <td>Label</td>
                   </tr>
-              <?php include("populateResolvedIssues.php"); ?> 
+              <?php $filepath="files/resolved_issues.txt" ; 
+                    if (file_exists($filepath)) 
+                    { 
+                      $file=fopen($filepath, 'r'); 
+                      while (!feof($file)) 
+                      { 
+                        $lines=fgets($file); 
+                        $first_char=$lines[0];
+                        if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
+                        { 
+                          $split=explode( '|', $lines);
+                          $name = str_replace(' ', '', $split[5]);
+                            if ($name=='AlyssaDunn') { 
+                            echo '<tr class="success">'; 
+                            foreach($split as $line) 
+                            { 
+                              echo '<td>'.$line. '</td>';
+                            } 
+                            echo '</tr>'; 
+                          }
+                        } 
+                      } fclose($file); 
+                    } 
+              ?>
                  </table>
                <p style="display: none">resolved_tab</p>
                 </div>
                </div>
-
         </div>
       </div>
     </div>    
