@@ -231,6 +231,7 @@
                     } fclose($file); 
                   } 
             ?>
+            
           </table>
           </div>
          </div>
