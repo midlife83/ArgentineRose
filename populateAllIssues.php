@@ -1,37 +1,35 @@
-<?php 
-			$unresolved_filepath="files/unresolved_issues.txt"; 
-			$resolved_filepath="files/resolved_issues.txt"; 
-			$new_filepath="files/all_issues.txt"; 
-			$unresolved_data=file($unresolved_filepath);
-			$resolved_data=file($resolved_filepath); 
-			$data=array_merge($unresolved_data,$resolved_data); 
-			arsort($data); 
-			file_put_contents($new_filepath, implode("\n", $data)); 
-			if (file_exists($new_filepath)) 
-			{ 
-				$file=fopen($new_filepath,'r'); 
-				while (!feof($file)) 
-				{ 
-					$lines=fgets($file); 
-					$first_char=$lines[0];
-					if ($first_char !='*' && $first_char !='^' && trim($lines) !='' ) 
-					{ 
-						$split=explode( '|', $lines); 
-						if (in_array($lines, $resolved_data)) 
-						{ 
-							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td>'; 
-						} 
-						else 
-						{ 
-							echo '<tr class="danger"><td><input type="checkbox" autocomplete="off"></td>';
-						} 
-						foreach($split as $line) 
-						{ 
-							echo '<td>'.$line. '</td>'; 
-						} 
-						echo '</tr>';
-					} 
-				} 
-				fclose($file); 
-			} 
-		?>
+<?php 	
+		
+	$db = new SQLite3('ar.db');
+			
+	
+	$ret = $db->query('SELECT * FROM issue');
+				
+	// //echo $ret=>fetchArray(SQLITE3_ASSOC); 
+	// //echo "<table border='1'>";
+	while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+	
+		$q = $row['issueResolved'];
+		// //echo 'lol';
+		if ($row['issueResolved']==0) 	{	
+			echo '<tr class="danger">';
+			}
+		else {
+			echo '<tr class="success">';
+			}
+		//echo "<td>".$row['issueResolved']."</td>";
+		echo '<td><input type="checkbox" autocomplete="off"></td>';
+		echo "<td>".$row['issueID']."</td>";
+		echo "<td>".$row['issueInstructorName']."</td>";
+		echo "<td>".$row['issueTitle']."</td>";
+		echo "<td>".$row['issueDate']."</td>";
+		echo "<td>".$row['issueStdNumber']."</td>";
+		echo "<td>".$row['issueStdName']."</td>";
+		echo "<td>".$row['issueLast']."</td>";
+		echo "<td>".$row['issueLabel']."</td>";
+		echo "</tr>";  
+		}
+	
+   // //echo "Operation done successfully\n";
+   $db->close();
+?>
