@@ -11,6 +11,8 @@
 1667|Meghan Poo|Vincent wanted to cancel...|Sept 15. 2013|23738321|Vincent Chiu|sept 05. 2013|General
 
 1662|Mike Kwan|John reported that there ...     |May 27. 2013|71822562|John Leung  |June 07. 2013|Q1     
+
+1662|Mike Kwan|John reported that there ...     |May 27. 2013|71822562|Jeff Jung  |June 07. 2013|Q1    
 1342|Mike Kwan|Winnie the pooh has...|May 27. 2013|32124342|Phoa Leung|June 07. 2013|Lab2
 
 1329|Maggie Pann|Ashley didn't do well on lab...|April 12. 2013|32124342|Ashley Chen|May 21. 2013|Lab2

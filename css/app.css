@@ -78,3 +78,7 @@ padding-right:10px;
 .grades {
   text-align: center;
 }
+
+#jeff {
+  display:none;
+}

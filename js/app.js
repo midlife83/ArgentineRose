@@ -181,3 +181,25 @@ function updateResolvedIssueTable()
 	
 			
 }
+
+function displayJeff(){
+	// to make it highlight the correct name when you click on another student
+	document.getElementById("alyssa-anchor").className='';
+	document.getElementById("alyssa-anchor").className='list-group-item';
+	document.getElementById("jeff-anchor").className='';
+	document.getElementById("jeff-anchor").className='list-group-item active';
+
+	document.getElementById('jeff').style.display='block';
+	document.getElementById('alyssa').style.display='none';
+
+}
+
+function displayAlyssa(){
+	document.getElementById("jeff-anchor").className='';
+	document.getElementById("jeff-anchor").className='list-group-item';
+	document.getElementById("alyssa-anchor").className='';
+	document.getElementById("alyssa-anchor").className='list-group-item active';
+
+	document.getElementById('alyssa').style.display='block';
+	document.getElementById('jeff').style.display='none';
+}

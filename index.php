@@ -87,8 +87,8 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list">
-        <a id="alyssa" class="list-group-item active">Dunn, Alyssa</a>
-        <a id="jeff" class="list-group-item" onclick="showAlyssa()">Jung, Jeff</a>
+        <a id="alyssa-anchor" class="list-group-item active" onclick="displayAlyssa()">Dunn, Alyssa</a>
+        <a id="jeff-anchor" class="list-group-item" onclick="displayJeff()">Jung, Jeff</a>
         <a href="#" class="list-group-item">Morbi leo risus</a>
         <a href="#" class="list-group-item">Porta ac cons</a>
         <a href="#" class="list-group-item">Vestibulum</a>
@@ -106,7 +106,7 @@
         <a href="#" class="list-group-item">Vestibulum</a>
       </div>
     </div>
-    <div class="alyssa col-sm-10" id="student-area">
+    <div class="alyssa col-sm-10" id="alyssa">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
@@ -122,7 +122,6 @@
             </div>
           </div>
           <div class="row">
-
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
@@ -157,60 +156,20 @@
             </li>
            </ul>
           </div>
-              <div class="tab-content" id="studentTabContent">
-                <div class="tab-pane active" id="unresolved_tab_student">
-                 <table class="table table-hover table-striped" id="unresolved_tab_table_student">
-                  <tr class="info">
-                   <td>Ref#</td>
-                   <td>Submitted by</td>
-                   <td>Issue Title</td>
-                   <td>Date Submitted</td>
-                   <td>Student #</td>
-                    <td>Student Name</td>
-                   <td>Last Activity</td>
-                   <td>Label</td>
-                  </tr>
-                  <?php $filepath="files/unresolved_issues.txt" ; 
-                        if (file_exists($filepath)) 
-                        { 
-                          $file=fopen($filepath, 'r'); 
-                          while (!feof($file)) 
-                          { 
-                            $lines=fgets($file); 
-                            $first_char=$lines[0];
-                            if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-                            { 
-                              $split=explode( '|', $lines);
-                              $name = str_replace(' ', '', $split[5]);
-                                if ($name=='AlyssaDunn') { 
-                                echo '<tr class="danger">'; 
-                                foreach($split as $line) 
-                                { 
-                                  echo '<td>'.$line. '</td>';
-                                } 
-                                echo '</tr>'; 
-                              }
-                            } 
-                          } fclose($file); 
-                        } 
-                  ?>
-                 </table>
-               <p style="display: none">unresolved_tab</p>
-              </div>
-
-                <div class="tab-pane" id="resolved_tab_student">
-                 <table class="table table-hover table-striped" id="resolved_tab_table_student">
-                  <tr class="info">
-                   <td>Ref#</td>
-                   <td>Submitted by</td>
-                   <td>Issue Title</td>
-                   <td>Date Submitted</td>
-                   <td>Student #</td>
-                   <td>Student Name</td>
-                   <td>Last Activity</td>
-                   <td>Label</td>
-                  </tr>
-              <?php $filepath="files/resolved_issues.txt" ; 
+          <div class="tab-content" id="studentTabContent">
+            <div class="tab-pane active" id="unresolved_tab_student">
+             <table class="table table-hover table-striped" id="unresolved_tab_table_student">
+              <tr class="info">
+               <td>Ref#</td>
+               <td>Submitted by</td>
+               <td>Issue Title</td>
+               <td>Date Submitted</td>
+               <td>Student #</td>
+                <td>Student Name</td>
+               <td>Last Activity</td>
+               <td>Label</td>
+              </tr>
+              <?php $filepath="files/unresolved_issues.txt" ; 
                     if (file_exists($filepath)) 
                     { 
                       $file=fopen($filepath, 'r'); 
@@ -223,7 +182,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='AlyssaDunn') { 
-                            echo '<tr class="success">'; 
+                            echo '<tr class="danger">'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -234,10 +193,178 @@
                       } fclose($file); 
                     } 
               ?>
-                 </table>
-               <p style="display: none">resolved_tab</p>
-                </div>
-               </div>
+             </table>
+          </div>
+          <div class="tab-pane" id="resolved_tab_student">
+           <table class="table table-hover table-striped" id="resolved_tab_table_student">
+            <tr class="info">
+             <td>Ref#</td>
+             <td>Submitted by</td>
+             <td>Issue Title</td>
+             <td>Date Submitted</td>
+             <td>Student #</td>
+             <td>Student Name</td>
+             <td>Last Activity</td>
+             <td>Label</td>
+            </tr>
+            <?php $filepath="files/resolved_issues.txt" ; 
+                  if (file_exists($filepath)) 
+                  { 
+                    $file=fopen($filepath, 'r'); 
+                    while (!feof($file)) 
+                    { 
+                      $lines=fgets($file); 
+                      $first_char=$lines[0];
+                      if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
+                      { 
+                        $split=explode( '|', $lines);
+                        $name = str_replace(' ', '', $split[5]);
+                          if ($name=='AlyssaDunn') { 
+                          echo '<tr class="success">'; 
+                          foreach($split as $line) 
+                          { 
+                            echo '<td>'.$line. '</td>';
+                          } 
+                          echo '</tr>'; 
+                        }
+                      } 
+                    } fclose($file); 
+                  } 
+            ?>
+          </table>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div> 
+    <div class="alyssa col-sm-10" id="jeff">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Jeff Jung</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-2">
+                <img src="assets/person.png">
+            </div>
+            <div class="col-sm-6">
+              <h4>Name: Jeff Jung</h4>
+              <h5>Student No: 2342342</h5>
+            </div>
+          </div>
+          <div class="row">
+            <table class="grades table table-bordered col-sm-4">
+              <tr class="info">
+               <td>Lab 1</td>
+               <td>Quiz 1</td>
+               <td>Lab 2</td>
+               <td>Lab 3</td>
+               <td>MT 1</td>
+               <td>Lab 4</td>
+               <td>Quiz 2</td>
+               <td>MT 2</td>
+              </tr>
+              <tr>
+              <td class="danger">40%</td>
+              <td>66%</td>
+              <td>50%</td>
+              <td>60%</td>
+              <td class="danger">33%</td>
+              <td class="danger">30%</td>
+              <td>60%</td>
+              <td>60%</td>
+            </table>
+          </div>
+          <h4>Issue History</h4>
+          <div class="row student-issue-sort">
+           <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
+            <li class="active left">
+             <a href="#unresolved_tab_student" data-toggle="tab">Unresolved</a>
+            </li>
+
+            <li class="left">
+             <a href="#resolved_tab_student" data-toggle="tab">Resolved</a>
+            </li>
+           </ul>
+          </div>
+          <div class="tab-content" id="studentTabContent">
+            <div class="tab-pane active" id="unresolved_tab_student">
+             <table class="table table-hover table-striped" id="unresolved_tab_table_student">
+              <tr class="info">
+               <td>Ref#</td>
+               <td>Submitted by</td>
+               <td>Issue Title</td>
+               <td>Date Submitted</td>
+               <td>Student #</td>
+                <td>Student Name</td>
+               <td>Last Activity</td>
+               <td>Label</td>
+              </tr>
+              <?php $filepath="files/unresolved_issues.txt" ; 
+                    if (file_exists($filepath)) 
+                    { 
+                      $file=fopen($filepath, 'r'); 
+                      while (!feof($file)) 
+                      { 
+                        $lines=fgets($file); 
+                        $first_char=$lines[0];
+                        if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
+                        { 
+                          $split=explode( '|', $lines);
+                          $name = str_replace(' ', '', $split[5]);
+                            if ($name=='JeffJung') { 
+                            echo '<tr class="danger">'; 
+                            foreach($split as $line) 
+                            { 
+                              echo '<td>'.$line. '</td>';
+                            } 
+                            echo '</tr>'; 
+                          }
+                        } 
+                      } fclose($file); 
+                    } 
+              ?>
+             </table>
+          </div>
+          <div class="tab-pane" id="resolved_tab_student">
+           <table class="table table-hover table-striped" id="resolved_tab_table_student">
+            <tr class="info">
+             <td>Ref#</td>
+             <td>Submitted by</td>
+             <td>Issue Title</td>
+             <td>Date Submitted</td>
+             <td>Student #</td>
+             <td>Student Name</td>
+             <td>Last Activity</td>
+             <td>Label</td>
+            </tr>
+            <?php $filepath="files/resolved_issues.txt" ; 
+                  if (file_exists($filepath)) 
+                  { 
+                    $file=fopen($filepath, 'r'); 
+                    while (!feof($file)) 
+                    { 
+                      $lines=fgets($file); 
+                      $first_char=$lines[0];
+                      if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
+                      { 
+                        $split=explode( '|', $lines);
+                        $name = str_replace(' ', '', $split[5]);
+                          if ($name=='JeffJung') { 
+                          echo '<tr class="success">'; 
+                          foreach($split as $line) 
+                          { 
+                            echo '<td>'.$line. '</td>';
+                          } 
+                          echo '</tr>'; 
+                        }
+                      } 
+                    } fclose($file); 
+                  } 
+            ?>
+          </table>
+          </div>
+         </div>
         </div>
       </div>
     </div>    
