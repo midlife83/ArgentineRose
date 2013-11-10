@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	// comment this line if debugging
+	ini_set('display_errors','off');
+?>
 
 <head>
  <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
@@ -18,6 +22,12 @@
   <div class="panel panel-primary">
    <div class="panel-heading">
     <?php session_start(); 
+	
+		$db = new SQLite3('ar.db');
+		$q = 'INSERT INTO issue(issueResolved,issueStdName,issueStdNumber,issueSection,issueTitle,';
+		$q .= 'issueDescription,issueAssigned, issueLabel, issueDate, issueLast, issueInstructorName,';
+		$q .= 'issueID) values(0,"';
+		
 		$name=$_POST['studentName']; 
 		$number=$_POST['studentNumber']; 
 		$section=$_POST['section']; 
@@ -32,9 +42,21 @@
 		$_SESSION['description']=$description; 
 		$_SESSION['assignment']=$assignment; 
 		$_SESSION['label']=$label; 
+		
+		$q .= $name . '",' . $number . ',"' . $section . '","' . $title . '","' . $description . '","';
+		$q .=  $assignment . '","' . $label . '",datetime("now"),datetime("now"),"' . $assignment . '",';
+		$q .= $db->lastInsertRowid() . ')';
+		//echo $q;
+		$ret = $db->query($q);
+		
 	?>
     <h2 style="margin:0px">
-     Issue #37:
+     <?php echo 'Issue #' . $db->lastInsertRowid();
+	 $db->close();
+	 	// Issue #37:
+		//echo 'lol';
+	 ?>
+
      <?php echo $title. "<br>"; ?>
     </h2>
    </div>
@@ -103,7 +125,15 @@
      <h3>
       Comments:
      </h3>
-  	 <img src="assets/person.png" alt="James Bond">
+  	 
+	<?php
+		if ($_POST['comment']!=NULL) {
+		echo '<hr size="0" width="50%" align="left"><img src="assets/person.png" alt="James Bond"><table><tr><td><font size="1"><strong>You</strong></font><font color="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;just now</font></td></tr><tr><td>' . $_POST['comment'] . '</td></tr></table>';
+		echo '<br><br>';
+		}
+	?>
+	 
+	 <img src="assets/person.png" alt="James Bond">
      <table>
       <tr>
        <td width="730"><strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong>
@@ -112,22 +142,26 @@
         </font>
        </td>
       </tr>   
+	  
+
       
 	<form class="form-horizontal" role="form" method="POST" action="single_issue.php">
             
       <tr>
        <td>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
+			<textarea class="form-control" name="comment" rows="6" placeholder="Write a comment"></textarea>
+			<!-- <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment"> -->
         </div>
 </td>
       </tr>
 
 <tr>   
 <td align="right">          
-	<button type="submit" class="btn btn-default">Comment</button>
+	<button type="submit" class="btn btn-default" onclick="window.location.href='single_issue.php'">Comment</button>
     </form>
     <td>
+
     </tr>
      </table>
   </div>
