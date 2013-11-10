@@ -279,16 +279,16 @@
           <div class="row student-issue-sort">
            <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
             <li class="active left">
-             <a href="#unresolved_tab_student" data-toggle="tab">Unresolved</a>
+             <a href="#unresolved_tab_student_jeff" data-toggle="tab">Unresolved</a>
             </li>
 
             <li class="left">
-             <a href="#resolved_tab_student" data-toggle="tab">Resolved</a>
+             <a href="#resolved_tab_student_jeff" data-toggle="tab">Resolved</a>
             </li>
            </ul>
           </div>
           <div class="tab-content" id="studentTabContent">
-            <div class="tab-pane active" id="unresolved_tab_student">
+            <div class="tab-pane active" id="unresolved_tab_student_jeff">
              <table class="table table-hover table-striped" id="unresolved_tab_table_student">
               <tr class="info">
                <td>Ref#</td>
@@ -326,7 +326,7 @@
               ?>
              </table>
           </div>
-          <div class="tab-pane" id="resolved_tab_student">
+          <div class="tab-pane" id="resolved_tab_student_jeff">
            <table class="table table-hover table-striped" id="resolved_tab_table_student">
             <tr class="info">
              <td>Ref#</td>
