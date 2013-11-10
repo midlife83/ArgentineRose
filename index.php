@@ -31,10 +31,10 @@
     <li class="left">
      <a href="#report_issues_tab" data-toggle="tab">Report An Issue</a>
     </li>
-	
-	<li class="right" style="width:300px; text-align:center">
-	<a href="#" id="recentActivityPopOver" rel="popover" data-original-title="Recent Activities">Recent Activities</a>
-	</li>
+        
+        <li class="right" style="width:300px; text-align:center">
+        <a href="#" id="recentActivityPopOver" rel="popover" data-original-title="Recent Activities">Recent Activities</a>
+        </li>
 
    </ul>
   </div>
@@ -42,28 +42,28 @@
   <div id="recentActivity_popover_content_wrapper" style="display: none">
                 <div class="list-group">
                   <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">just now</font></span>
-					<font size="1">Mike updated Issue #3252</font>
+                                        <span class="badge pull-right"><font size="1">just now</font></span>
+                                        <font size="1">Mike updated Issue #3252</font>
                   </a>
                   <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">23 mins ago</font></span>
-					<font size="1">Julie commneted on Issue #2212</font>
+                                        <span class="badge pull-right"><font size="1">23 mins ago</font></span>
+                                        <font size="1">Julie commneted on Issue #2212</font>
                   </a>
-				  <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">48 mins ago</font></span>
-					<font size="1">Ashley resolved Issue #1789</font>
+                                  <a href="#" class="list-group-item">
+                                        <span class="badge pull-right"><font size="1">48 mins ago</font></span>
+                                        <font size="1">Ashley resolved Issue #1789</font>
                   </a>
-				  <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">1 hour ago</font></span>
-					<font size="1">Tom created Issue #4912</font>
+                                  <a href="#" class="list-group-item">
+                                        <span class="badge pull-right"><font size="1">1 hour ago</font></span>
+                                        <font size="1">Tom created Issue #4912</font>
                   </a>
-				  <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">just now</font></span>
-					<font size="1">Joseph edited Issue #2732</font>
+                                  <a href="#" class="list-group-item">
+                                        <span class="badge pull-right"><font size="1">just now</font></span>
+                                        <font size="1">Joseph edited Issue #2732</font>
                   </a>
-				  <a href="#" class="list-group-item">
-					<span class="badge pull-right"><font size="1">just now</font></span>
-					<font size="1">Michael resolved Issue #1821</font>
+                                  <a href="#" class="list-group-item">
+                                        <span class="badge pull-right"><font size="1">just now</font></span>
+                                        <font size="1">Michael resolved Issue #1821</font>
                   </a>
                 </div>
                 <div class="text-right">
@@ -399,13 +399,13 @@
         <a href="#all_tab" data-toggle="tab" onClick="changeToMarkAsBothResolvedAndUnresolved()">All</a>
        </li>
       </ul>
-	  
+          
       <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton" onclick="updateIssuesTable()">Mark As Resolved
-	  </button>
+          </button>
      </div>
 
 
-     <div class="tab-content" id="issuesTabContent">
+<div class="tab-content" id="issuesTabContent">
       <div class="tab-pane active" id="unresolved_tab">
        <table class="table table-hover table-striped" id="unresolved_tab_table">
         <tr class="info">
@@ -474,7 +474,7 @@
     <div class="panel-heading" align="center">
      <h2 style="margin-top:5px; float:center">Report An Issue</h2>
     </div>
-	<form class="form-horizontal" role="form" method="POST" action="single_issue.php"
+        <form class="form-horizontal" role="form" method="POST" action="single_issue.php"
       target='_blank'>
     <div class="panel panel-default">
      <div class="panel-body">
@@ -498,14 +498,14 @@
         <label for="section" class="col-sm-2 control-label">Section</label>
         <div class="col-sm-4">
          <select id="section" name="section" class="form-control">
-		  <option>101</option>
+                  <option>101</option>
           <option>102</option>
           <option>201</option>
-		  <option>202</option>
-		  <option>L1A</option>
+                  <option>202</option>
+                  <option>L1A</option>
           <option>L1B</option>
           <option>L1C</option>
-		  <option>L2A</option>
+                  <option>L2A</option>
           <option>L2B</option>
           <option>L3C</option>
           <option>T1A</option>
@@ -568,13 +568,13 @@
          </select>
         </div>
        </div>       
-     </div>	 
+     </div>         
     </div>
-	<div class="row" align="right">
+        <div class="row" align="right">
         <button type="submit" class="btn btn-default">Submit</button>
-		<button type="reset" class="btn btn-default">Reset</button>
+                <button type="reset" class="btn btn-default">Reset</button>
    </div>
-	</form>
+        </form>
    </div>
    
   </div>
@@ -584,13 +584,13 @@
   <script src="vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="js/app.js" type="text/javascript"></script>
   <script>  
-	$(function ()  
-	{ 
-		$("#recentActivityPopOver").popover({placement:'bottom', trigger: 'click', html:true,
-		content: function() {
+        $(function ()  
+        { 
+                $("#recentActivityPopOver").popover({placement:'bottom', trigger: 'click', html:true,
+                content: function() {
           return $('#recentActivity_popover_content_wrapper').html();
         }});  
-	});  
+        });  
   </script>  
  </div>
 </body>
