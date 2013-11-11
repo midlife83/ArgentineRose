@@ -10,6 +10,7 @@
 			if (file_exists($new_filepath)) 
 			{ 
 				$file=fopen($new_filepath,'r'); 
+				$ref = 0;
 				while (!feof($file)) 
 				{ 
 					$lines=fgets($file); 
@@ -19,17 +20,17 @@
 						$split=explode( '|', $lines); 
 						if (in_array($lines, $resolved_data)) 
 						{ 
-							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td>'; 
+							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td><a href="resolved_issue.php">'; 
 						} 
 						else 
 						{ 
-							echo '<tr class="danger"><td><input type="checkbox" autocomplete="off"></td>';
+							echo '<tr class="danger"><a href="unresolved_issue.php"><td><input type="checkbox" autocomplete="off"></td>';
 						} 
 						foreach($split as $line) 
 						{ 
 							echo '<td>'.$line. '</td>'; 
 						} 
-						echo '</tr>';
+						echo '</a></tr>';
 					} 
 				} 
 				fclose($file); 
