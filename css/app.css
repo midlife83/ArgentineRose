@@ -88,6 +88,7 @@ padding-right:10px;
   display:none;
 }
 
-.panel-primary {
-  height:500px;
+.panel-body {
+  height:461px;
+  overflow:scroll;
 }

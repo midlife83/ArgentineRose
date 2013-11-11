@@ -122,8 +122,10 @@
                 <img src="assets/person.png">
             </div>
             <div class="col-sm-6">
-              <h4>Name: Betty Allman</h4>
+              <h4>Betty Allman</h4>
               <h5>Student No: 12345678</h5>
+              <h5>Lecture Section: 102</h5>
+              <h5>Lab Section: L2D</h5>
             </div>
           </div>
           <div class="row">
@@ -254,8 +256,11 @@
                 <img src="assets/person.png">
             </div>
             <div class="col-sm-6">
-              <h4>Name: Valerie Chen</h4>
-              <h5>Student No: 2342342</h5>
+              <h4>Valerie Chen</h4>
+              <h5>Student No: 23423534</h5>
+              <h5>Lecture Section: 101</h5>
+              <h5>Lab Section: L1H</h5>
+
             </div>
           </div>
           <div class="row">
@@ -275,10 +280,10 @@
               <td class="danger">40%</td>
               <td>66%</td>
               <td>50%</td>
-              <td>60%</td>
-              <td class="danger">33%</td>
-              <td class="danger">30%</td>
-              <td>60%</td>
+              <td>75%</td>
+              <td class="danger">39%</td>
+              <td class="danger">20%</td>
+              <td>57%</td>
               <td>60%</td>
             </table>
           </div>
