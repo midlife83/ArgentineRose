@@ -10,9 +10,9 @@ function searchStudent()
 			return false;
 			break;
 		}
-	}
-	return false;
+	}	
 	alert('Not found');
+	return false;
 }
 
 function checkAllCheckboxes(checkBox)
