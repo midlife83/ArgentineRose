@@ -82,7 +82,7 @@
     <br>
 
     <div class="btn-group">
-     <button type="button" class="btn btn-default">Edit</button>
+     <button type="button" class="btn btn-default" onclick="window.location.href='edit.php'">Edit</button>
 		 
      <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php'">
 <?php

@@ -28,7 +28,7 @@
 		 $label=$_SESSION['label']; 
 	?>
     <h2 style="margin:0px">
-     Resolve An Issue: Issue# 37 <?php echo $title; ?>
+     Resolve An Issue: Issue# 1037 <?php echo $title; ?>
     </h2>
    </div>
 
@@ -97,7 +97,7 @@
     </div>
 	
 	<div class="row" align="right">	
-		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px" onclick="window.close();"><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
+		<button type="button" class="btn btn-default" style="float:right; margin-bottom:0px" onclick=window.location.href='unresolved_issue.php'><span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
 		<button type="submit" class="btn btn-default" style="float:right; margin-bottom:0px"><span class="glyphicon glyphicon-ok-sign"></span> Resolve</button>
 		
 	</div>

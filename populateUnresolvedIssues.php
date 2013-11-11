@@ -8,7 +8,7 @@
 					if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
 					{ 
 						$split=explode( '|', $lines); 
-						echo '<tr class="danger"><td><input type="checkbox"  autocomplete="off"></td>'; 
+						echo '<tr class="danger" ><td><input type="checkbox"  autocomplete="off"></td>'; 
 						foreach($split as $line) 
 						{ 
 							echo '<td>'.$line. '</td>'; 
@@ -16,5 +16,6 @@
 						echo '</tr>'; 
 					} 
 				} fclose($file); 
-			} 
+			} 		
+			
 ?>
