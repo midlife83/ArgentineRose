@@ -28,6 +28,7 @@
 		$label=$_SESSION['label'];
 		$comment=$_SESSION['comment'];
 		$ref=$_SESSION['ref'];
+		$isFollowed=$_SESSION['isFollowed'];
 
 	
 	?>
@@ -82,7 +83,12 @@
 
     <div class="btn-group">
      <button type="button" class="btn btn-default">Edit</button>
-     <button type="button" class="btn btn-default">Follow</button>
+		 
+     <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php'">
+<?php
+     if($isFollowed==0){echo "Follow";}else{echo "Unfollow";}
+?>     
+</button>
      <button type="button" class="btn btn-default" onclick="window.location.href='resolve.php'">Resolve</button>
     </div>
 

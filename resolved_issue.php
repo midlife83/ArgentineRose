@@ -17,21 +17,29 @@
  <div class="container" style="margin-top:10px; width:70%">
   <div class="panel panel-primary">
    <div class="panel-heading">
+    <span class="btn-danger">
     <?php session_start(); 
-		$solution=$_POST['solution'];
-		$name = $_SESSION['name']; 
-		$number = $_SESSION['number']; 
-		$section = $_SESSION['section'];
-		$title = $_SESSION['title'];
-		$description = $_SESSION['description'];
-		$assignment = $_SESSION['assignment'];
-		$label = $_SESSION['label'];
+	
+
+		$name=$_SESSION['name']; 
+		$number=$_SESSION['number']; 
+		$section=$_SESSION['section'];
+		$title=$_SESSION['title']; 
+		$description=$_SESSION['description'];
+		$solution=$_SESSION['solution'];  
+		$assignment=$_SESSION['assignment']; 
+		$label=$_SESSION['label'];
+		$comment=$_SESSION['comment'];
+		$ref=$_SESSION['ref'];
+		$isFollowed=$_SESSION['isFollowed'];
+	
 	?>
+    </span>
     <h2 style="margin:0px">
-     Issue #37:
+     Issue #1037:
      <?php echo $title. "<br>"; ?>
     </h2>
-   </div>
+</div>
 
    <div class="panel-body" id="opened_issue_tab">
     
@@ -80,7 +88,11 @@
     <br>
 
     <div class="btn-group">
-      <button type="button" class="btn btn-default">Follow</button> 
+     <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php'">
+<?php
+     if($isFollowed==0){echo "Follow";}else{echo "Unfollow";}
+?>     
+</button>
     </div>
 
     <hr>
@@ -110,6 +122,56 @@
      <h3>
       Comments:
      </h3>
+<?php if($comment){ ?>
+
+     <img src="assets/person.png" alt="Meghan Allen">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>Alyssa Dunn</strong>
+        </font>
+        <font color="gray">1 second ago</font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+       <?php echo $comment. "<br>"; ?>
+       </td>
+      </tr>
+     </table>
+
+<?php }else if(!$ref){ ?>	
+
+	 <img src="assets/person.png" alt="James Bond">
+     <table>
+     <tr>
+     <td width="730">
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
+       </td>
+      </tr>   
+      
+	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
+            
+      <tr>
+       <td>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
+        </div>
+</td>
+      </tr>
+
+<tr>   
+<td align="right">          
+	<button type="submit" class="btn btn-default">Comment</button>
+    </form>
+    <td>
+    </tr>
+     </table>
+	 
+<?php }else {?>	 
+
      <img src="assets/person.png" alt="Meghan Allen">
      <table>
       <tr>
@@ -148,9 +210,8 @@
       </tr>
      </table>
      
-    </div>
-	<button type="button" class="btn btn-default" style="float:right"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-   </div>
+<?php }?>
+
   </div>
  </div>
 </body>

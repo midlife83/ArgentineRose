@@ -11,6 +11,7 @@ session_start();
 		$_SESSION['label']=$_POST['label'];
 		$_SESSION['comment']=NULL; 
 		$_SESSION['ref']=NULL;
+		$_SESSION['isFollowed']=0; 
 			
 		 header("location: unresolved_issue.php");
 ?>

@@ -34,7 +34,7 @@
 
    <div class="panel-body" id="opened_issue_tab">
     
-    <form class="form-horizontal" role="form" method="POST" action="resolved_issue.php">
+    <form class="form-horizontal" role="form" method="POST" action="resolve_handler.php">
 
     
 
@@ -58,6 +58,7 @@
        Status:
        <font color="red">Unresolved</font>
       </h3>
+      <br>
      </div>
 
      <div class="col-md-4">
