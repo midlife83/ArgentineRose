@@ -87,37 +87,38 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list">
-        <a id="alyssa-anchor" class="list-group-item active" onclick="displayAlyssa()">Dunn, Alyssa</a>
-        <a id="jeff-anchor" class="list-group-item" onclick="displayJeff()">Jung, Jeff</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
-        <a href="#" class="list-group-item">Dapibus ac facilis</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
-                <a href="#" class="list-group-item">Dapibus ac facilis</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-                <a href="#" class="list-group-item">Dapibus ac facilis</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac cons</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
-        <a href="#" class="list-group-item">Vestibulum</a>
+        <a id="student-anchor-one" class="list-group-item active" onclick="displayStudentOne()">Allman, Betty</a>
+        <a id="student-anchor-two" class="list-group-item" onclick="displayStudentTwo()">Chen, Valerie</a>
+        <a href="#" class="list-group-item">Crimmins, Laurette</a>
+        <a href="#" class="list-group-item">Dapolito, Rosy</a>
+        <a href="#" class="list-group-item">Donahue, Laveta</a>
+        <a href="#" class="list-group-item">Ford, Lloyd</a>
+        <a href="#" class="list-group-item">Murray, Pa</a>
+        <a href="#" class="list-group-item">Ou, Jenny</a>
+        <a href="#" class="list-group-item">Pattingson, Trey</a>
+        <a href="#" class="list-group-item">Port, Eliza</a>
+        <a href="#" class="list-group-item">Prokop, Shanna</a>
+        <a href="#" class="list-group-item">Pilgrim, Felecia </a>
+        <a href="#" class="list-group-item">Rodriques, Emma</a>
+        <a href="#" class="list-group-item">Sturgill, Shanae</a>
+        <a href="#" class="list-group-item">Swan, Bryan</a>
+        <a href="#" class="list-group-item">Weathersby, Wallace</a>
+        <a href="#" class="list-group-item">Yang, Tiffany</a>
+        <a href="#" class="list-group-item">Yang, Wendy</a>
       </div>
     </div>
-    <div class="alyssa col-sm-10" id="alyssa">
+    <div class="alyssa col-sm-10" id="student-one">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Alyssa Dunn</h3>
+          <h3 class="panel-title">Betty Allman</h3>
         </div>
         <div class="panel-body">
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <img src="assets/person.png">
             </div>
             <div class="col-sm-6">
-              <h4>Name: Alyssa Dunn</h4>
+              <h4>Name: Betty Allman</h4>
               <h5>Student No: 12345678</h5>
             </div>
           </div>
@@ -181,7 +182,7 @@
                         { 
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
-                            if ($name=='AlyssaDunn') { 
+                            if ($name=='BettyAllman') { 
                             echo '<tr class="danger">'; 
                             foreach($split as $line) 
                             { 
@@ -219,7 +220,7 @@
                       { 
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
-                          if ($name=='AlyssaDunn') { 
+                          if ($name=='BettyAllman') { 
                           echo '<tr class="success">'; 
                           foreach($split as $line) 
                           { 
@@ -237,7 +238,7 @@
         </div>
       </div>
     </div> 
-    <div class="alyssa col-sm-10" id="jeff">
+    <div class="alyssa col-sm-10" id="student-two">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Jeff Jung</h3>

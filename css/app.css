@@ -79,6 +79,10 @@ padding-right:10px;
   text-align: center;
 }
 
-#jeff {
+#student-two {
   display:none;
+}
+
+.panel-primary {
+  height:500px;
 }
