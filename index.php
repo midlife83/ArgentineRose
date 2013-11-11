@@ -31,6 +31,10 @@
     <li class="left">
      <a href="#report_issues_tab" data-toggle="tab">Report An Issue</a>
     </li>
+
+    <li class="left">
+     <a href="#email_students" data-toggle="tab">Email Struggling Students</a>
+    </li>
 	
 	<li class="right" style="width:300px; text-align:center">
 	<a href="#" id="recentActivityPopOver" rel="popover" data-original-title="Recent Activities">Recent Activities</a>
@@ -241,7 +245,7 @@
     <div class="alyssa col-sm-10" id="student-two">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Jeff Jung</h3>
+          <h3 class="panel-title">Valerie Chen</h3>
         </div>
         <div class="panel-body">
           <div class="row">
@@ -249,7 +253,7 @@
                 <img src="assets/person.png">
             </div>
             <div class="col-sm-6">
-              <h4>Name: Jeff Jung</h4>
+              <h4>Name: Valerie Chen</h4>
               <h5>Student No: 2342342</h5>
             </div>
           </div>
@@ -313,7 +317,7 @@
                         { 
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
-                            if ($name=='JeffJung') { 
+                            if ($name=='ValerieChen') { 
                             echo '<tr class="danger">'; 
                             foreach($split as $line) 
                             { 
@@ -351,7 +355,7 @@
                       { 
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
-                          if ($name=='JeffJung') { 
+                          if ($name=='ValerieChen') { 
                           echo '<tr class="success">'; 
                           foreach($split as $line) 
                           { 
