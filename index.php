@@ -118,7 +118,7 @@
         </div>
         <div class="panel-body">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <img src="assets/person.png">
             </div>
             <div class="col-sm-6">
@@ -127,6 +127,7 @@
             </div>
           </div>
           <div class="row">
+            <h4 class="grades-header">Grades</h3>
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>
@@ -258,6 +259,7 @@
             </div>
           </div>
           <div class="row">
+            <h4 class="grades-header">Grades</h3>
             <table class="grades table table-bordered col-sm-4">
               <tr class="info">
                <td>Lab 1</td>

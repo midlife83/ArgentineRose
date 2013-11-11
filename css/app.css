@@ -79,6 +79,11 @@ padding-right:10px;
   text-align: center;
 }
 
+.grades-header {
+  padding-left:15px;
+  padding-top:15px;
+}
+
 #student-two {
   display:none;
 }
