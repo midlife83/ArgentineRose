@@ -18,23 +18,21 @@
   <div class="panel panel-primary">
    <div class="panel-heading">
     <?php session_start(); 
-		$name=$_POST['studentName']; 
-		$number=$_POST['studentNumber']; 
-		$section=$_POST['section']; 
-		$title=$_POST['title']; 
-		$description=$_POST['description']; 
-		$assignment=$_POST['assignedTo']; 
-		$label=$_POST['label']; 
-		$_SESSION['name']=$name; 
-		$_SESSION['number']=$number; 
-		$_SESSION['section']=$section;
-		$_SESSION['title']=$title; 
-		$_SESSION['description']=$description; 
-		$_SESSION['assignment']=$assignment; 
-		$_SESSION['label']=$label; 
+
+		$name=$_SESSION['name']; 
+		$number=$_SESSION['number']; 
+		$section=$_SESSION['section'];
+		$title=$_SESSION['title']; 
+		$description=$_SESSION['description']; 
+		$assignment=$_SESSION['assignment']; 
+		$label=$_SESSION['label'];
+		$comment=$_SESSION['comment'];
+		$ref=$_SESSION['ref'];
+
+	
 	?>
     <h2 style="margin:0px">
-     Issue #37:
+     Issue #1037:
      <?php echo $title. "<br>"; ?>
     </h2>
    </div>
@@ -103,17 +101,38 @@
      <h3>
       Comments:
      </h3>
-  	 <img src="assets/person.png" alt="James Bond">
+     
+<?php if($comment){ ?>
+
+     <img src="assets/person.png" alt="Meghan Allen">
      <table>
       <tr>
-       <td width="730"><strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong>
+       <td>
+        <font size="1">
+         <strong>Alyssa Dunn</strong>
         </font>
-        <font color="gray">
-        </font>
+        <font color="gray">1 second ago</font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+       <?php echo $comment. "<br>"; ?>
+       </td>
+      </tr>
+     </table>
+
+<?php }else if(!$ref){ ?>	
+
+	 <img src="assets/person.png" alt="James Bond">
+     <table>
+     <tr>
+     <td width="730">
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
        </td>
       </tr>   
       
-	<form class="form-horizontal" role="form" method="POST" action="single_issue.php">
+	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
             
       <tr>
        <td>
@@ -130,6 +149,49 @@
     <td>
     </tr>
      </table>
+	 
+<?php }else {?>	 
+
+     <img src="assets/person.png" alt="Meghan Allen">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>Meghan Allen</strong>
+        </font>
+        <font color="gray">2 days ago</font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+        Can someone email the student and get them to come to my office next Tuesday?
+       </td>
+      </tr>
+     </table>
+
+     <hr size="0" width="50%" align="left">
+     <img src="assets/person.png" alt="James Bond">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>James Bond</strong>
+        </font>
+        <font color="gray">2 hours 12 minutes ago
+        </font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+        Sure. I just emailed. Will inform you once she reponds.
+       </td>
+      </tr>
+     </table>
+     
+<?php }?>
+
   </div>
  </div>
 </body>

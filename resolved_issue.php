@@ -25,7 +25,7 @@
 		$title = $_SESSION['title'];
 		$description = $_SESSION['description'];
 		$assignment = $_SESSION['assignment'];
-		$label = $_SESSION['label']; 
+		$label = $_SESSION['label'];
 	?>
     <h2 style="margin:0px">
      Issue #37:

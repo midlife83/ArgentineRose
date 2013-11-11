@@ -67,7 +67,7 @@
                   </a>
                 </div>
                 <div class="text-right">
-                  <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="#">View All Activities <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
   </div>
 
@@ -474,7 +474,7 @@
     <div class="panel-heading" align="center">
      <h2 style="margin-top:5px; float:center">Report An Issue</h2>
     </div>
-	<form class="form-horizontal" role="form" method="POST" action="single_issue.php"
+	<form class="form-horizontal" role="form" method="POST" action="report_handler.php"
       target='_blank'>
     <div class="panel panel-default">
      <div class="panel-body">
@@ -574,7 +574,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
 		<button type="reset" class="btn btn-default">Reset</button>
    </div>
-	</form>
+	</form>   
    </div>
    
   </div>
