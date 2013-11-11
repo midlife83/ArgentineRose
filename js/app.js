@@ -1,3 +1,20 @@
+function searchStudent()
+{	
+	var studentList = document.getElementById("student_list_div");
+	var studentToFind = document.getElementById('studentSearch').value;
+	for (var i=1; i<studentList.childNodes.length; i++)
+	{
+		if (studentList.childNodes[i].textContent.indexOf(studentToFind) != -1)
+		{
+			studentList.childNodes[i].click();
+			return false;
+			break;
+		}
+	}
+	return false;
+	alert('Not found');
+}
+
 function checkAllCheckboxes(checkBox)
 {	
 	var $tab = $('#issuesTabContent'), $active = $tab.find('.tab-pane.active'), text = $active.find('p:hidden').text();	

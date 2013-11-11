@@ -81,7 +81,7 @@
     <div class="panel-heading" align="center">
      <h2 style="margin-top:5px; margin-bottom:0px; float:center">Students</h2>
     </div>
-    <form class="form-horizontal" role="search" style="margin-top: 10px">
+    <form class="form-horizontal" role="search" style="margin-top: 10px" onsubmit="searchStudent()" action="javascript:void(0);" >
      <div class="form-group" align="center">
       <label for="studentSearch" class="col-sm-2 control-label">Search Students:</label>
       <div class="col-sm-8">
@@ -90,7 +90,7 @@
      </div>
     </form>
     <div class="col-sm-2" >
-      <div class="list-group student-list">
+      <div class="list-group student-list" id="student_list_div">
         <a id="student-anchor-one" class="list-group-item active" onclick="displayStudentOne()">Allman, Betty</a>
         <a id="student-anchor-two" class="list-group-item" onclick="displayStudentTwo()">Chen, Valerie</a>
         <a href="#" class="list-group-item">Crimmins, Laurette</a>
