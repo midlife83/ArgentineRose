@@ -62,7 +62,7 @@
       </p>
 
       <h3>
-       Status: <font color="green">Unresolved</font>
+       Status: <font color="red">Unresolved</font>
       </h3>
      </div>
 
