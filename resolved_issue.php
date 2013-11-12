@@ -43,7 +43,7 @@
     </h2>
 </div>
 
-   <div class="panel-body" id="opened_issue_tab">
+   <div class="panel-body" id="opened_issue_tab" style="height:100%">
     
     <div class="row">
      <div class="col-md-8">

@@ -14,7 +14,7 @@
 </head>
 
 <body>
- <div class="container" style="margin-top:10px; width:70%; height:100%">
+ <div class="container" style="margin-top:10px; width:70%;">
   <div class="panel panel-primary">
    <div class="panel-heading">
     <?php session_start(); 
@@ -38,7 +38,7 @@
     </h2>
    </div>
 
-   <div class="panel-body" id="opened_issue_tab">
+   <div class="panel-body" id="opened_issue_tab"  style="height:100%">
     
     <div class="row">
      <div class="col-md-8">
@@ -134,7 +134,7 @@
      <table>
      <tr>
      <td width="730">
-     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alyssa Dunn(Me)</strong></font><font color="gray"></font>
        </td>
       </tr>   
       

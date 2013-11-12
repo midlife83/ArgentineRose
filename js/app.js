@@ -300,6 +300,7 @@ function displayTommy(){
 	document.getElementById('john').style.display='none';
 	document.getElementById('phoa').style.display='none';
 }
+
 function displayVincent(){
 	document.getElementById("jeff-anchor").className='';
 	document.getElementById("jeff-anchor").className='list-group-item';
