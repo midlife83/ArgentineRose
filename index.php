@@ -180,7 +180,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='AlyssaDunn') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event);">'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -218,7 +218,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='AlyssaDunn') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event);">'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -315,7 +315,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='JeffJung') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";">'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -353,7 +353,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='JeffJung') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -450,7 +450,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='AshleyChen') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";>'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -488,7 +488,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='AshleyChen') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -584,7 +584,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='TommyNan') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";>'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -622,7 +622,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='TommyNan') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -719,7 +719,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='VincentChiu') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";>'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -757,7 +757,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='VincentChiu') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -854,7 +854,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='JohnLeung') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";>'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -892,7 +892,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='JohnLeung') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
@@ -989,7 +989,7 @@
                           $split=explode( '|', $lines);
                           $name = str_replace(' ', '', $split[5]);
                             if ($name=='PhoaLeung') { 
-                            echo '<tr class="danger">'; 
+                            echo '<tr class="danger" onClick="unresolvedClick(event)";>'; 
                             foreach($split as $line) 
                             { 
                               echo '<td>'.$line. '</td>';
@@ -1027,7 +1027,7 @@
                         $split=explode( '|', $lines);
                         $name = str_replace(' ', '', $split[5]);
                           if ($name=='PhoaLeung') { 
-                          echo '<tr class="success">'; 
+                          echo '<tr class="success" onClick="resolvedClick(event)";>'; 
                           foreach($split as $line) 
                           { 
                             echo '<td>'.$line. '</td>';
