@@ -1051,11 +1051,11 @@
     <div class="panel-heading" align="center">
      <h2 style="margin-top:5px; margin-bottom:0px; float:center">List of Issues</h2>
     </div>
-    <form class="form-horizontal" role="search" style="margin-top: 10px">
+    <form class="form-horizontal" role="search" onSubmit="alert('Not Implemented Yet. Assume search function works and display the result in a user-friendly way.')" style="margin-top: 10px">
      <div class="form-group" align="center">
       <label class="col-sm-2 control-label" for="searchIssues">Search Issues:</label>
       <div class="col-sm-8">
-       <input type="text" class="form-control" id="searchIssues" placeholder="Enter Student Name/ Student Number/ Professor Name/ TA Name/ Key Word">
+       <input type="text" class="form-control" id="searchIssues" placeholder="Enter Ref# /Student Name/ Student Number/ Professor Name/ TA Name/ Key Word">
       </div>
      </div>
     </form>
@@ -1063,17 +1063,18 @@
     <div class="container" id="issuesTabContainer">
      <div class="row">
       <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
-       <li class="active left">
+       <li class="active left" id="unresolvedIssueList">
         <a href="#unresolved_tab" data-toggle="tab" onClick="changeToMarkAsResolved()">Unresolved</a>
        </li>
 
-       <li class="left">
+       <li class="left" id="resolvedIssueList">
         <a href="#resolved_tab" data-toggle="tab" onClick="changeToMarkAsUnresolved()">Resolved</a>
        </li>
 
-       <li class="left">
+       <li class="left" id="allIssueList">
         <a href="#all_tab" data-toggle="tab" onClick="changeToMarkAsBothResolvedAndUnresolved()">All</a>
        </li>
+	   
       </ul>
           
       <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton" onclick="updateIssuesTable()">Mark As Resolved
