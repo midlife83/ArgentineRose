@@ -139,7 +139,7 @@
       </tr>
             
       <tr>   
-<td align="right">          
+<td width="700" align="right">          
 	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
 
     </td>
@@ -203,7 +203,7 @@
       </tr>
             
       <tr>   
-<td align="right">          
+<td align="right" width="700">          
 	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
  
     </td>
@@ -216,7 +216,7 @@
 	 <img src="assets/person.png" alt="James Bond">
      <table>
      <tr>
-     <td width="730">
+     <td width="700">
      <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
        </td>
       </tr>   
@@ -286,7 +286,7 @@
 	 <img src="assets/person.png" alt="James Bond">
      <table>
      <tr>
-     <td width="730">
+     <td width="700">
      <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
        </td>
       </tr>   
