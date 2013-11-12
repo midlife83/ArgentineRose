@@ -671,14 +671,14 @@
                <td>MT 2</td>
               </tr>
               <tr>
-              <td>85%</td>
-              <td>56%</td>
+              <td>65%</td>
+              <td>78%</td>
               <td>52%</td>
-              <td>95%</td>
-              <td>99%</td>
-              <td>70%</td>
-              <td>87%</td>
-              <td>70%</td>
+              <td>75%</td>
+              <td>69%</td>
+              <td>50%</td>
+              <td>77%</td>
+              <td>80%</td>
             </table>
           </div>
           <h4>Issue History</h4>
@@ -1153,7 +1153,7 @@
         <form class="form-horizontal" role="form" method="POST" action="report_handler.php"
       target='_blank'>
     <div class="panel panel-default">
-     <div class="panel-body">
+     <div class="panel-body"  style="height:100%">
       
        <div class="form-group">
         <label for="studentName" class="col-sm-2 control-label">Student Name</label>
