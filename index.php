@@ -33,7 +33,7 @@
     </li>
 
     <li class="left">
-     <a href="" data-toggle="tab" onclick="alert('Not implemented for this prototype. Assume there is an email system that allows you to email all struggling students easily.')">Email Struggling Students</a>
+     <a href="" onclick="alert('Not implemented for this prototype. Assume there is an email system that allows you to email all struggling students easily.'); return false;">Email Struggling Students</a>
     </li>
         
         <li class="right" style="width:300px; text-align:center">
