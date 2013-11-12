@@ -20,17 +20,26 @@
 						$split=explode( '|', $lines); 
 						if (in_array($lines, $resolved_data)) 
 						{ 
-							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td><a href="resolved_issue.php">'; 
+							$danger = 0;
+							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td>'; 
 						} 
 						else 
-						{ 
-							echo '<tr class="danger"><a href="unresolved_issue.php"><td><input type="checkbox" autocomplete="off"></td>';
+						{ 	
+							$danger = 1;
+							echo '<tr class="danger"><td><input type="checkbox" autocomplete="off"></td>';
 						} 
 						foreach($split as $line) 
 						{ 
-							echo '<td>'.$line. '</td>'; 
+							if ($danger==0)
+							{
+								echo '<td><a href="resolved_issue.php">'.$line. '</a></td>'; 
+							}
+							else
+							{
+								echo '<td><a href="unresolved_issue.php">'.$line. '</a></td>'; 
+							}
 						} 
-						echo '</a></tr>';
+						echo '</tr>';
 					} 
 				} 
 				fclose($file); 

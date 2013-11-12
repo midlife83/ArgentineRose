@@ -11,7 +11,7 @@
 						echo '<tr class="danger" ><td><input type="checkbox"  autocomplete="off"></td>'; 
 						foreach($split as $line) 
 						{ 
-							echo '<td>'.$line. '</td>'; 
+							echo '<td><a href="unresolved_issue.php">'.$line. '</td>'; 
 						} 
 						echo '</tr>'; 
 					} 
