@@ -1,5 +1,3 @@
-<?php error_reporting(0); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,32 +14,29 @@
 </head>
 
 <body>
- <div class="container" style="margin-top:10px; width:70%">
+ <div class="container" style="margin-top:10px; width:70%; height:100%">
   <div class="panel panel-primary">
    <div class="panel-heading">
-    <span class="btn-danger">
     <?php session_start(); 
-	
 
 		$name=$_SESSION['name']; 
 		$number=$_SESSION['number']; 
 		$section=$_SESSION['section'];
 		$title=$_SESSION['title']; 
-		$description=$_SESSION['description'];
-		$solution=$_SESSION['solution'];  
+		$description=$_SESSION['description']; 
 		$assignment=$_SESSION['assignment']; 
 		$label=$_SESSION['label'];
 		$comment=$_SESSION['comment'];
 		$ref=$_SESSION['ref'];
 		$isFollowed=$_SESSION['isFollowed'];
+
 	
 	?>
-    </span>
     <h2 style="margin:0px">
-     Issue #1037:
+     Issue #4231:
      <?php echo $title. "<br>"; ?>
     </h2>
-</div>
+   </div>
 
    <div class="panel-body" id="opened_issue_tab">
     
@@ -50,7 +45,7 @@
 	  <p>
 		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
       </p>
-
+	 
       <p>
        Assigned to
        <?php echo $assignment. "<br>"; ?>
@@ -62,7 +57,8 @@
       </p>
 
       <h3>
-       Status: <font color="red">Unresolved</font>
+       Status:
+       <font color="red">Unresolved</font>
       </h3>
      </div>
 
@@ -86,40 +82,32 @@
     <br>
 
     <div class="btn-group">
+     <button type="button" class="btn btn-default" onclick="window.location.href='edit.php'">Edit</button>
+		 
      <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php'">
 <?php
      if($isFollowed==0){echo "Follow";}else{echo "Unfollow";}
 ?>     
 </button>
+     <button type="button" class="btn btn-default" onclick="window.location.href='resolve.php'">Resolve</button>
     </div>
 
     <hr>
 
-    <div class="container">     
+    <div class="container">
+     <h3 style="margin-top:0px">
+      Description:
+     </h3>
 
-	<div class="row" style="margin-left:0px">
-	 <div class="col-sm-4" style="padding:0px">
-		 <h3 style="margin-top:0px; margin-left:0px">
-		  Description:
-		 </h3>
-		 <p>
-		  <?php echo $description. "<br>"; ?>
-		 </p>
-	 </div>
-	 <div class="col-sm-6" style="padding:0px">
-		 <h3 style="margin-top:0px; margin-left:0px">
-		  Solution:
-		 </h3>
-		 <p>
-		  <?php echo $solution. "<br>"; ?>
-		 </p>
-	 </div>
-	</div>
-	<br>
+     <p>
+      <?php echo $description. "<br>"; ?>
+     </p>
+     <br>
 
      <h3>
       Comments:
      </h3>
+     
 <?php if($comment){ ?>
 
      <img src="assets/person.png" alt="Meghan Allen">
