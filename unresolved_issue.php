@@ -141,11 +141,10 @@
       <tr>   
 <td align="right">          
 	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-    </form>
-    <td>
+
+    </td>
     </tr>
      </table>
-
 	<?php }else { ?>
     
      <img src="assets/person.png" alt="Meghan Allen">
@@ -206,15 +205,14 @@
       <tr>   
 <td align="right">          
 	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-    </form>
-    <td>
+ 
+    </td>
     </tr>
      </table>
-
 <?php }}else { ?>
 
 	<?php if(!$ref){ ?>
-
+<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
 	 <img src="assets/person.png" alt="James Bond">
      <table>
      <tr>
@@ -223,7 +221,7 @@
        </td>
       </tr>   
       
-	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
+	
             
       <tr>
        <td>
@@ -236,10 +234,11 @@
 <tr>   
 <td align="right">          
 	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-    </form>
-    <td>
+    
+    </td>
     </tr>
-    </table>    
+    </table>  
+</form>	
 	 
 	<?php }else {?>	 
     
@@ -283,7 +282,7 @@
      </table>
 
      <hr size="0" width="50%" align="left">   
-
+	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
 	 <img src="assets/person.png" alt="James Bond">
      <table>
      <tr>
@@ -292,7 +291,7 @@
        </td>
       </tr>   
       
-	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
+
             
       <tr>
        <td>
@@ -305,11 +304,11 @@
 <tr>   
 <td align="right">          
 	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-    </form>
+    
     <td>
     </tr>
      </table>
-     
+     </form>
 <?php 
 	
 	}
@@ -317,6 +316,8 @@
 ?>
 
   </div>
+ </div>
+ </div>
  </div>
 </body>
 
