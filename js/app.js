@@ -1,3 +1,25 @@
+function unresolvedClick(e){
+	var targ;
+	if(!e) var e = window.event;
+	if(e.target) targ = e.target;
+	else if(e.srcElement) targ = e.srcElement;
+	if(targ.nodeType == 3) // defeat Safari bug
+		targ = targ.parentNode;
+	if(targ.nodeName!="INPUT") 
+		window.open('view_unresolved_handler.php');
+}
+
+function resolvedClick(e) {
+var targ;
+	if(!e) var e = window.event;
+	if(e.target) targ = e.target;
+	else if(e.srcElement) targ = e.srcElement;
+	if(targ.nodeType == 3) // defeat Safari bug
+		targ = targ.parentNode;
+	if(targ.nodeName!="INPUT") 
+	    window.open('view_resolved_handler.php');
+}
+
 function searchStudent()
 {	
 	var studentList = document.getElementById("student_list_div");
@@ -103,24 +125,34 @@ function updateAllIssueTable()
 		{				
 			for (var j = 0; j < unresolvedTable.rows.length; j++) 
 			{
-				if (unresolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
+				if (unresolvedTable.rows[j].cells[1].childNodes[0].textContent == cells[1].childNodes[0].textContent)
 				{
-					unresolvedTable.rows[j].cells[0].firstChild.checked = true;
-					j = unresolvedTable.rows.length;
+					unresolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					break;
 				}
+				
 			}
 			
 			for (var j = 0; j < resolvedTable.rows.length; j++) 
 			{
-				if (resolvedTable.rows[j].cells[1].childNodes[0].nodeValue == row.cells[1].childNodes[0].nodeValue)
+				if (resolvedTable.rows[j].cells[1].childNodes[0].textContent == cells[1].childNodes[0].textContent)
 				{
-					resolvedTable.rows[j].cells[0].firstChild.checked = true;
-					j = resolvedTable.rows.length;
+					resolvedTable.rows[j].cells[0].childNodes[0].checked = true;
+					break;
 				}
-			}
+				
+			}			
 			
-			row.className='success';
-			row.cells[0].firstChild.checked = false;
+			cells[0].childNodes[0].checked = false;
+			
+			if (row.className == 'success')
+			{
+				row.className='danger';
+			}
+			else
+			{
+				row.className='success';
+			}
 			
 			updateUnresolvedIssueTable();
 			updateResolvedIssueTable();
@@ -152,7 +184,7 @@ function updateUnresolvedIssueTable()
 			i--;
 			x--;
 			
-			for (var r = 1, n = allIssuesTable.rows.length; r < n; r++) {
+			for (var r = 1; r < allIssuesTable.rows.length; r++) {
 				if(allIssuesTable.rows[r].cells[1].childNodes[0].nodeValue == clone.cells[1].childNodes[0].nodeValue)
 				{
 					allIssuesTable.rows[r].className = 'success';
@@ -187,7 +219,7 @@ function updateResolvedIssueTable()
 			i--;
 			x--;
 			
-			for (var r = 1, n = allIssuesTable.rows.length; r < n; r++) {
+			for (var r = 1;  r < allIssuesTable.rows.length; r++) {
 				if(allIssuesTable.rows[r].cells[1].childNodes[0].nodeValue == clone.cells[1].childNodes[0].nodeValue)
 				{
 					allIssuesTable.rows[r].className = 'danger';

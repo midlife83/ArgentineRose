@@ -1083,7 +1083,7 @@
 
      <div class="tab-content" id="issuesTabContent">
       <div class="tab-pane active" id="unresolved_tab">
-       <table class="table table-hover table-striped" id="unresolved_tab_table">
+       <table class="table table-hover table-striped" id="unresolved_tab_table" onClick="tableClick(event);">
         <tr class="info">
          <td>
           <input type="checkbox" id="unresolved_table_checkbox" autocomplete="off" onclick="checkAllCheckboxes(this)">

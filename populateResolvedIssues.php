@@ -8,7 +8,7 @@
 					if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
 					{ 
 						$split=explode( '|', $lines); 
-						echo '<tr class="success" onClick="window.open(\'view_resolved_handler.php\');"><td><input type="checkbox" autocomplete="off"></td>'; 
+						echo '<tr class="success" onClick="resolvedClick(event);"><td><input type="checkbox" autocomplete="off"></td>'; 
 						foreach($split as $line) 
 						{ 
 							echo '<td>'.$line. '</td>'; 

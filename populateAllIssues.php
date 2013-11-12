@@ -21,7 +21,7 @@
 						
 						if (in_array($lines, $resolved_data)) 
 						{ 
-							echo '<tr class="success" onClick="window.open(\'view_resolved_handler.php\');"><td><input type="checkbox" autocomplete="off"></td>'; 
+							echo '<tr class="success" onClick="resolvedClick(event);"><td><input type="checkbox" autocomplete="off"></td>'; 
 							
 							foreach($split as $line) 
 							{ 
@@ -32,7 +32,7 @@
 						} 
 						else 
 						{ 	
-							echo '<tr class="danger" onClick="window.open(\'view_unresolved_handler.php\');"><td><input type="checkbox" autocomplete="off"></td>'; 
+							echo '<tr class="danger" onClick="unresolvedClick(event);"><td><input type="checkbox" autocomplete="off"></td>'; 
 						
 							foreach($split as $line) 
 							{ 
