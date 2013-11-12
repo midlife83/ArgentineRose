@@ -137,6 +137,13 @@
        <?php echo $comment. "<br>"; ?>
        </td>
       </tr>
+            
+      <tr>   
+<td align="right">          
+	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
+    </form>
+    <td>
+    </tr>
      </table>
 
 	<?php }else { ?>
@@ -195,6 +202,13 @@
        <?php echo $comment. "<br>"; ?>
        </td>
       </tr>
+            
+      <tr>   
+<td align="right">          
+	<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
+    </form>
+    <td>
+    </tr>
      </table>
 
 <?php }}else { ?>
