@@ -8,14 +8,14 @@
 					if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
 					{ 
 						$split=explode( '|', $lines); 
-						echo '<tr class="danger" ><td><input type="checkbox"  autocomplete="off"></td>'; 
+						echo '<tr class="danger" onClick="window.open(\'view_unresolved_handler.php\');" ><td><input type="checkbox"  autocomplete="off"></td>'; 
 						foreach($split as $line) 
 						{ 
-							echo '<td><a href="unresolved_issue.php">'.$line. '</td>'; 
+							echo '<td>'.$line. '</td>'; 
 						} 
 						echo '</tr>'; 
 					} 
 				} fclose($file); 
-			} 		
+			} 
 			
 ?>

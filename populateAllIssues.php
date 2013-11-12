@@ -18,30 +18,30 @@
 					if ($first_char !='*' && $first_char !='^' && trim($lines) !='' ) 
 					{ 
 						$split=explode( '|', $lines); 
+						
 						if (in_array($lines, $resolved_data)) 
 						{ 
-							$danger = 0;
-							echo '<tr class="success"><td><input type="checkbox" autocomplete="off"></td>'; 
+							echo '<tr class="success" onClick="window.open(\'view_resolved_handler.php\');"><td><input type="checkbox" autocomplete="off"></td>'; 
+							
+							foreach($split as $line) 
+							{ 
+								echo '<td>'.$line. '</a></td>'; 
+							} 							
+							echo '</tr>';	
+							
 						} 
 						else 
 						{ 	
-							$danger = 1;
-							echo '<tr class="danger"><td><input type="checkbox" autocomplete="off"></td>';
+							echo '<tr class="danger" onClick="window.open(\'view_unresolved_handler.php\');"><td><input type="checkbox" autocomplete="off"></td>'; 
+						
+							foreach($split as $line) 
+							{ 
+								echo '<td>'.$line. '</a></td>'; 
+							} 						
+							echo '</tr>';
 						} 
-						foreach($split as $line) 
-						{ 
-							if ($danger==0)
-							{
-								echo '<td><a href="resolved_issue.php">'.$line. '</a></td>'; 
-							}
-							else
-							{
-								echo '<td><a href="unresolved_issue.php">'.$line. '</a></td>'; 
-							}
-						} 
-						echo '</tr>';
-					} 
 				} 
+				}
 				fclose($file); 
-			} 
-		?>
+			}
+?>

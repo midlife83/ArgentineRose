@@ -33,7 +33,9 @@
 	
 	?>
     <h2 style="margin:0px">
-     Issue #4231:
+     Issue #
+     <?php if($ref) {echo $ref;} else {echo '4231';} ?>
+     :
      <?php echo $title. "<br>"; ?>
     </h2>
    </div>
@@ -117,6 +119,8 @@
      
 <?php if($comment){ ?>
 
+	<?php if(!$ref){ ?>
+
      <img src="assets/person.png" alt="Meghan Allen">
      <table>
       <tr>
@@ -135,36 +139,8 @@
       </tr>
      </table>
 
-<?php }else if(!$ref){ ?>	
-
-	 <img src="assets/person.png" alt="James Bond">
-     <table>
-     <tr>
-     <td width="730">
-     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alyssa Dunn(Me)</strong></font><font color="gray"></font>
-       </td>
-      </tr>   
-      
-	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
-            
-      <tr>
-       <td>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
-        </div>
-</td>
-      </tr>
-
-<tr>   
-<td align="right">          
-	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
-    </form>
-    <td>
-    </tr>
-     </table>
-	 
-<?php }else {?>	 
-
+	<?php }else { ?>
+    
      <img src="assets/person.png" alt="Meghan Allen">
      <table>
       <tr>
@@ -202,8 +178,129 @@
        </td>
       </tr>
      </table>
+  	<hr size="0" width="50%" align="left">   
+     <img src="assets/person.png" alt="Meghan Allen">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>Alyssa Dunn</strong>
+        </font>
+        <font color="gray">1 second ago</font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+       <?php echo $comment. "<br>"; ?>
+       </td>
+      </tr>
+     </table>
+
+<?php }}else { ?>
+
+	<?php if(!$ref){ ?>
+
+	 <img src="assets/person.png" alt="James Bond">
+     <table>
+     <tr>
+     <td width="730">
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
+       </td>
+      </tr>   
+      
+	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
+            
+      <tr>
+       <td>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
+        </div>
+</td>
+      </tr>
+
+<tr>   
+<td align="right">          
+	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
+    </form>
+    <td>
+    </tr>
+    </table>    
+	 
+	<?php }else {?>	 
+    
+ 	<hr size="0" width="50%" align="left">
+     <img src="assets/person.png" alt="Meghan Allen">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>Meghan Allen</strong>
+        </font>
+        <font color="gray">2 days ago</font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+        Can someone email the student and get them to come to my office next Tuesday?
+       </td>
+      </tr>
+     </table>
      
-<?php }?>
+          <hr size="0" width="50%" align="left">
+     <img src="assets/person.png" alt="James Bond">
+     <table>
+      <tr>
+       <td>
+        <font size="1">
+         <strong>James Bond</strong>
+        </font>
+        <font color="gray">2 hours 12 minutes ago
+        </font>
+       </td>
+      </tr>
+
+      <tr>
+       <td>
+        Sure. I just emailed. Will inform you once she reponds.
+       </td>
+      </tr>
+     </table>
+
+     <hr size="0" width="50%" align="left">   
+
+	 <img src="assets/person.png" alt="James Bond">
+     <table>
+     <tr>
+     <td width="730">
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
+       </td>
+      </tr>   
+      
+	<form class="form-horizontal" role="form" method="POST" action="comment_handler.php">
+            
+      <tr>
+       <td>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="comment" name="comment" placeholder="Write a comment">
+        </div>
+</td>
+      </tr>
+
+<tr>   
+<td align="right">          
+	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
+    </form>
+    <td>
+    </tr>
+     </table>
+     
+<?php 
+	
+	}
+	}
+?>
 
   </div>
  </div>
