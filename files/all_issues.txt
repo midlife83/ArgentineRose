@@ -1,24 +1,74 @@
-2321|Jeff Jung|Alyssa is busy this weekend...   |Nov 10. 2013|12345678|Betty Allman |Nov 12. 2013|General
+3321|Joan McGray|Jeff is busy this weekend...   |Nov 10. 2013|12345678|Jeff Jung  |Nov 12. 2013|General
 
-2128|Maggie Pann|Ashley didn't do well on lab...|Oct 05. 2013|32124342|Ashley Chen |Oct 21. 2013|Lab3   
+3321|Joan McGray|Alyssa is busy this weekend...   |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
 
-2111|Greger Wales|Tommy's team didn't do...|Nov 04. 2013|53212178|Tommy Nan|Nov 12. 2013|Lab1
+3228|Karrot McLean|John didn't do well on lab...|Oct 05. 2013|32124342|John Leung  |Oct 21. 2013|Lab3   
 
-2003|Joan McGray|The mark seemed unfair to...|Oct 05. 2013|32124342|Ashley Chen|Oct 21. 2013|Midterm1
+3228|Karrot McLean|Ashley didn't do well on lab...|Oct 05. 2013|32124342|Ashley Chen  |Oct 21. 2013|Lab3   
 
-1929|Meghan Poo|Vincent cheated on last...      |Sep 15. 2013|23737891|Vincent Chiu|sept 05. 2013|General
+3129|Greger Wales|Vincent cheated on last...      |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
 
-1667|Meghan Poo|Vincent wanted to cancel...|Sept 15. 2013|23738321|Vincent Chiu|sept 05. 2013|General
+3129|Erica Wilbur|It seems like he really...      |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
 
-1662|Mike Kwan|John reported that there ...     |May 27. 2013|71822562|Valerie Chen |June 07. 2013|Q1    
-1662|Mike Kwan|John reported that there ...     |May 27. 2013|71822562|John Leung  |June 07. 2013|Q1     
+3112|Meg Kallen|John reported that there ...      |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1     
 
-1342|Mike Kwan|Winnie the pooh has...|May 27. 2013|32124342|Phoa Leung|June 07. 2013|Lab2
+3112|Meg Kallen|Ashley reported that there ...      |May 27. 2013|71822562|Ashley Chen   |June 07. 2013|Q1     
 
-1329|Maggie Pann|Ashley didn't do well on lab...|April 12. 2013|32124342|Ashley Chen|May 21. 2013|Lab2
+3062|Bonny Salvo|Phoa yelled at the TA of ...     |May 27. 2013|71822562|Phoa Leung   |June 07. 2013|Q1    
 
-1277|Meghan Poo|Vincent cheated on last...|March 25. 2013|45737891|Vincent Chiu|June 01. 2013|General
+3062|Bonny Salvo|John yelled at the TA of ...     |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1    
 
-1193|Mike Kwan|John reported that there ...|Jan 29. 2013|41822562|John Leung|June 07. 2013|Q3
+2921|Erica Wilbur|Jeff said this weekend...     |Nov 10. 2013|12345678|Jeff Jung  |Nov 12. 2013|General
 
-1193|Mike Kwan|John reported that there ...|Jan 29. 2013|41822562|Betty Allman|June 07. 2013|Q3
+2921|Erica Wilbur|Alyssa said this weekend...     |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
+
+2828|Jazmine Hermes|John failed on lab 6...     |Oct 05. 2013|32124342|John Leung  |Oct 21. 2013|Lab3   
+
+2828|Jazmine Hermes|Ashley failed on lab 6...     |Oct 05. 2013|32124342|Ashley Chen  |Oct 21. 2013|Lab3   
+
+2729|Shasta Francois|Vincent cheated on last...   |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
+
+2729|Joan McGray|He hates that somebody...   |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
+
+2621|Joan McGray|Tommy is making up this weekend..|Nov 10. 2013|12345678|Tommy Nan    |Nov 12. 2013|General
+
+2621|Joan McGray|Tommy is making up this weekend..|Nov 10. 2013|12345678|Tommy Nan    |Nov 12. 2013|General
+
+2528|Karrot McLean|John didn't do well on lab...  |Oct 05. 2013|32124342|John Leung   |Oct 21. 2013|Lab3   
+
+2528|Karrot McLean|Ashley didn't do well on lab...  |Oct 05. 2013|32124342|Ashley Chen   |Oct 21. 2013|Lab3   
+
+2429|Greger Wales|Vincent seems have cheated...   |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
+
+2429|Greger Wales|Alyssa seems have cheated...   |Sep 15. 2013|23737891|Alyssa Dunn |sept 05. 2013|General
+
+2362|Meg Kallen|Tommy is scared that there ...      |May 27. 2013|71822562|Tommy Nan  |June 07. 2013|Q1     
+
+2362|Meg Kallen|John reported that there ...      |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1     
+
+2262|Bonny Salvo|Tommy reported that there ...    |May 27. 2013|71822562|Tommy Nan    |June 07. 2013|Q1    
+
+2262|Bonny Salvo|John screamed that there ...    |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1    
+
+2121|Erica Wilbur|Jeff needs help on Q1...      |Nov 10. 2013|12345678|Jeff Jung  |Nov 12. 2013|General
+
+2121|Erica Wilbur|Alyssa needs help on Q1...      |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
+
+2028|Jazmine Hermes|Phoa did very well on lab...  |Oct 05. 2013|32124342|Phoa Leung   |Oct 21. 2013|Lab3   
+
+2028|Jazmine Hermes|Ashley did very well on lab...  |Oct 05. 2013|32124342|Ashley Chen   |Oct 21. 2013|Lab3   
+
+1929|Shasta Francois|Phoa has personal issues...  |Sep 15. 2013|23737891|Phoa Leung   |sept 05. 2013|General
+
+1929|Shasta Francois|Phoa has personal issues...  |Sep 15. 2013|23737891|Phoa Leung   |sept 05. 2013|General
+
+1528|Karrot McLean|Jeff requested that all TAs... |Oct 05. 2013|32124342|Jeff Jung    |Oct 21. 2013|Lab3   
+
+1528|Karrot McLean|Alyssa requested that all TAs... |Oct 05. 2013|32124342|Alyssa Dunn  |Oct 21. 2013|Lab3   
+
+1429|Greger Wales|Vincent suggested that profs ...   |Sep 15. 2013|23737891|Vincent Chiu  |sept 05. 2013|General
+
+1429|Greger Wales|Jeff suggested that profs ...   |Sep 15. 2013|23737891|Jeff Jung    |sept 05. 2013|General
+
+1362|Meg Kallen|Jeff reported that there ...      |May 27. 2013|71822562|Jeff Jung    |June 07. 2013|Q1     
+1362|Meg Kallen|Alyssa reported that there ...      |May 27. 2013|71822562|Alyssa Dunn  |June 07. 2013|Q1  

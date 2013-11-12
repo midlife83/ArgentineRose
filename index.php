@@ -85,7 +85,7 @@
      <div class="form-group" align="center">
       <label for="studentSearch" class="col-sm-2 control-label">Search Students:</label>
       <div class="col-sm-8">
-       <input type="text" class="form-control" id="studentSearch" placeholder="Student Name/ Student Number/ Professor Name/ TA Name/ Key Word">
+       <input type="text" class="form-control" id="studentSearch" placeholder="Student Name(only this one's implemented yet) / Student Number/ Professor Name/ TA Name/ Key Word">
       </div>
      </div>
     </form>
@@ -105,7 +105,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Alyssa Dunn</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -240,7 +240,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Jeff Jung</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -375,7 +375,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Ashley Chen</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -510,7 +510,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Tommy Nan</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -644,7 +644,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Vincent Chiu</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -779,7 +779,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">John Leung</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
@@ -914,7 +914,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">Phoa Leung</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height:700px">
           <div class="row">
             <div class="col-sm-2">
                 <img src="assets/person.png">
