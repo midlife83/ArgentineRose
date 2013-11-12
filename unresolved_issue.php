@@ -84,9 +84,16 @@
     <div class="btn-group">
      <button type="button" class="btn btn-default" onclick="window.location.href='edit.php'">Edit</button>
 		 
-     <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php'">
+     <button type="button" class="btn btn-default" onclick="window.location.href='change_following.php';">
 <?php
-     if($isFollowed==0){echo "Follow";}else{echo "Unfollow";}
+     if($isFollowed==0)
+	 {
+		echo "Follow";
+	 }
+	 else
+	 {
+		echo "Unfollow";
+	 }
 ?>     
 </button>
      <button type="button" class="btn btn-default" onclick="window.location.href='resolve.php'">Resolve</button>
@@ -150,7 +157,7 @@
 
 <tr>   
 <td align="right">          
-	<button type="submit" class="btn btn-default">Comment</button>
+	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
     </form>
     <td>
     </tr>

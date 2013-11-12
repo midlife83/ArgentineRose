@@ -166,7 +166,7 @@
 
 <tr>   
 <td align="right">          
-	<button type="submit" class="btn btn-default">Comment</button>
+	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Comment</button>
     </form>
     <td>
     </tr>
