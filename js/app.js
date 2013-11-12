@@ -199,28 +199,6 @@ function updateResolvedIssueTable()
 			
 }
 
-function displayStudentTwo(){
-	// to make it highlight the correct name when you click on another student
-	document.getElementById("student-anchor-one").className='';
-	document.getElementById("student-anchor-one").className='list-group-item';
-	document.getElementById("student-anchor-two").className='';
-	document.getElementById("student-anchor-two").className='list-group-item active';
-
-	document.getElementById('student-two').style.display='block';
-	document.getElementById('student-one').style.display='none';
-
-}
-
-function displayStudentOne(){
-	document.getElementById("student-anchor-two").className='';
-	document.getElementById("student-anchor-two").className='list-group-item';
-	document.getElementById("student-anchor-one").className='';
-	document.getElementById("student-anchor-one").className='list-group-item active';
-
-	document.getElementById('student-one').style.display='block';
-	document.getElementById('student-two').style.display='none';
-}
-
 function displayJeff(){
 	// to make it highlight the correct name when you click on another student
 	document.getElementById("alyssa-anchor").className='';
@@ -231,21 +209,21 @@ function displayJeff(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 	
 	
 	document.getElementById('jeff').style.display='block';
 	document.getElementById('alyssa').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('tommy').style.display='none';
-	// document.getElementById('vincent').style.display='none';
-	// document.getElementById('john').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('vincent').style.display='none';
+	document.getElementById('john').style.display='none';
+	document.getElementById('phoa').style.display='none';
 
 }
 
@@ -258,20 +236,20 @@ function displayAlyssa(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 
 	document.getElementById('alyssa').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('tommy').style.display='none';
-	// document.getElementById('vincent').style.display='none';
-	// document.getElementById('john').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('vincent').style.display='none';
+	document.getElementById('john').style.display='none';
+	document.getElementById('phoa').style.display='none';
 }
 
 function displayAshley(){
@@ -283,20 +261,20 @@ function displayAshley(){
 	document.getElementById("ashley-anchor").className='list-group-item active';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 
 	document.getElementById('ashley').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('alyssa').style.display='none';
 	document.getElementById('tommy').style.display='none';
-	// document.getElementById('vincent').style.display='none';
-	// document.getElementById('john').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('vincent').style.display='none';
+	document.getElementById('john').style.display='none';
+	document.getElementById('phoa').style.display='none';
 }
 function displayTommy(){
 	document.getElementById("jeff-anchor").className='';
@@ -307,20 +285,20 @@ function displayTommy(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item active';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 
 	document.getElementById('tommy').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('alyssa').style.display='none';
-	// document.getElementById('vincent').style.display='none';
-	// document.getElementById('john').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('vincent').style.display='none';
+	document.getElementById('john').style.display='none';
+	document.getElementById('phoa').style.display='none';
 }
 function displayVincent(){
 	document.getElementById("jeff-anchor").className='';
@@ -331,20 +309,20 @@ function displayVincent(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item active';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item active';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 
-	// document.getElementById('vincent').style.display='block';
+	document.getElementById('vincent').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('tommy').style.display='none';
 	document.getElementById('alyssa').style.display='none';
-	// document.getElementById('john').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('john').style.display='none';
+	document.getElementById('phoa').style.display='none';
 }
 
 function displayJohn(){
@@ -356,20 +334,20 @@ function displayJohn(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item active';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item active';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item';
 
-	// document.getElementById('john').style.display='block';
+	document.getElementById('john').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('tommy').style.display='none';
-	// document.getElementById('vincent').style.display='none';
+	document.getElementById('vincent').style.display='none';
 	document.getElementById('alyssa').style.display='none';
-	// document.getElementById('phoa').style.display='none';
+	document.getElementById('phoa').style.display='none';
 }
 function displayPhoa(){
 	document.getElementById("jeff-anchor").className='';
@@ -380,18 +358,18 @@ function displayPhoa(){
 	document.getElementById("ashley-anchor").className='list-group-item';
 	document.getElementById("tommy-anchor").className='';
 	document.getElementById("tommy-anchor").className='list-group-item';
-	// document.getElementById("vincent-anchor").className='';
-	// document.getElementById("vincent-anchor").className='list-group-item';
-	// document.getElementById("john-anchor").className='';
-	// document.getElementById("john-anchor").className='list-group-item';
-	// document.getElementById("phoa-anchor").className='';
-	// document.getElementById("phoa-anchor").className='list-group-item active';
+	document.getElementById("vincent-anchor").className='';
+	document.getElementById("vincent-anchor").className='list-group-item';
+	document.getElementById("john-anchor").className='';
+	document.getElementById("john-anchor").className='list-group-item';
+	document.getElementById("phoa-anchor").className='';
+	document.getElementById("phoa-anchor").className='list-group-item active';
 
-	// document.getElementById('phoa').style.display='block';
+	document.getElementById('phoa').style.display='block';
 	document.getElementById('jeff').style.display='none';
 	document.getElementById('ashley').style.display='none';
 	document.getElementById('tommy').style.display='none';
-	// document.getElementById('vincent').style.display='none';
-	// document.getElementById('john').style.display='none';
+	document.getElementById('vincent').style.display='none';
+	document.getElementById('john').style.display='none';
 	document.getElementById('alyssa').style.display='none';
 }

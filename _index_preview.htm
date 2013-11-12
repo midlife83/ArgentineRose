@@ -146,16 +146,16 @@
           <div class="row student-issue-sort">
            <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
             <li class="active left">
-             <a href="#unresolved_tab_student_alyssa" data-toggle="tab">Unresolved</a>
+             <a href="#unresolved_tab_student" data-toggle="tab">Unresolved</a>
             </li>
 
             <li class="left">
-             <a href="#resolved_tab_student_alyssa" data-toggle="tab">Resolved</a>
+             <a href="#resolved_tab_student" data-toggle="tab">Resolved</a>
             </li>
            </ul>
           </div>
           <div class="tab-content" id="studentTabContent">
-            <div class="tab-pane active" id="unresolved_tab_student_alyssa">
+            <div class="tab-pane active" id="unresolved_tab_student">
              <table class="table table-hover table-striped" id="unresolved_tab_table_student">
               <tr class="info">
                <td>Ref#</td>
@@ -193,7 +193,7 @@
               ?>
              </table>
           </div>
-          <div class="tab-pane" id="resolved_tab_student_alyssa">
+          <div class="tab-pane" id="resolved_tab_student">
            <table class="table table-hover table-striped" id="resolved_tab_table_student">
             <tr class="info">
              <td>Ref#</td>
@@ -369,7 +369,9 @@
          </div>
         </div>
       </div>
-    </div>
+    </div>    
+  </div>
+   
     <div class="alyssa col-sm-10" id="ashley">
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -503,8 +505,9 @@
           </div>
          </div>
         </div>
-      </div> 
-    </div>
+      </div>
+    </div>    
+   
    <div class="alyssa col-sm-10" id="tommy">
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -520,6 +523,7 @@
               <h5>Student No: 23423534</h5>
               <h5>Lecture Section: 101</h5>
               <h5>Lab Section: L1H</h5>
+
             </div>
           </div>
           <div class="row">
@@ -638,7 +642,9 @@
          </div>
         </div>
       </div>
-    </div>
+    </div> 
+	</div> 
+   
    <div class="alyssa col-sm-10" id="vincent">
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -773,279 +779,9 @@
          </div>
         </div>
       </div>
-    </div>
-   <div class="alyssa col-sm-10" id="john">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">John Leung</h3>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-2">
-                <img src="assets/person.png">
-            </div>
-            <div class="col-sm-6">
-              <h4>Name: John Leung</h4>
-              <h5>Student No: 12312321</h5>
-              <h5>Lecture Section: 101</h5>
-              <h5>Lab Section: L1C</h5>
-
-            </div>
-          </div>
-          <div class="row">
-            <h4 class="grades-header">Grades</h3>
-            <table class="grades table table-bordered col-sm-4">
-              <tr class="info">
-               <td>Lab 1</td>
-               <td>Quiz 1</td>
-               <td>Lab 2</td>
-               <td>Lab 3</td>
-               <td>MT 1</td>
-               <td>Lab 4</td>
-               <td>Quiz 2</td>
-               <td>MT 2</td>
-              </tr>
-              <tr>
-              <td>85%</td>
-              <td>56%</td>
-              <td>52%</td>
-              <td>95%</td>
-              <td>99%</td>
-              <td>70%</td>
-              <td>87%</td>
-              <td>70%</td>
-            </table>
-          </div>
-          <h4>Issue History</h4>
-          <div class="row student-issue-sort">
-           <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
-            <li class="active left">
-             <a href="#unresolved_tab_student_john" data-toggle="tab">Unresolved</a>
-            </li>
-
-            <li class="left">
-             <a href="#resolved_tab_student_john" data-toggle="tab">Resolved</a>
-            </li>
-           </ul>
-          </div>
-          <div class="tab-content" id="studentTabContent">
-            <div class="tab-pane active" id="unresolved_tab_student_john">
-             <table class="table table-hover table-striped" id="unresolved_tab_table_student">
-              <tr class="info">
-               <td>Ref#</td>
-               <td>Submitted by</td>
-               <td>Issue Title</td>
-               <td>Date Submitted</td>
-               <td>Student #</td>
-                <td>Student Name</td>
-               <td>Last Activity</td>
-               <td>Label</td>
-              </tr>
-              <?php $filepath="files/unresolved_issues.txt" ; 
-                    if (file_exists($filepath)) 
-                    { 
-                      $file=fopen($filepath, 'r'); 
-                      while (!feof($file)) 
-                      { 
-                        $lines=fgets($file); 
-                        $first_char=$lines[0];
-                        if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-                        { 
-                          $split=explode( '|', $lines);
-                          $name = str_replace(' ', '', $split[5]);
-                            if ($name=='JohnLeung') { 
-                            echo '<tr class="danger">'; 
-                            foreach($split as $line) 
-                            { 
-                              echo '<td>'.$line. '</td>';
-                            } 
-                            echo '</tr>'; 
-                          }
-                        } 
-                      } fclose($file); 
-                    } 
-              ?>
-             </table>
-          </div>
-          <div class="tab-pane" id="resolved_tab_student_john">
-           <table class="table table-hover table-striped" id="resolved_tab_table_student">
-            <tr class="info">
-             <td>Ref#</td>
-             <td>Submitted by</td>
-             <td>Issue Title</td>
-             <td>Date Submitted</td>
-             <td>Student #</td>
-             <td>Student Name</td>
-             <td>Last Activity</td>
-             <td>Label</td>
-            </tr>
-            <?php $filepath="files/resolved_issues.txt" ; 
-                  if (file_exists($filepath)) 
-                  { 
-                    $file=fopen($filepath, 'r'); 
-                    while (!feof($file)) 
-                    { 
-                      $lines=fgets($file); 
-                      $first_char=$lines[0];
-                      if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-                      { 
-                        $split=explode( '|', $lines);
-                        $name = str_replace(' ', '', $split[5]);
-                          if ($name=='JohnLeung') { 
-                          echo '<tr class="success">'; 
-                          foreach($split as $line) 
-                          { 
-                            echo '<td>'.$line. '</td>';
-                          } 
-                          echo '</tr>'; 
-                        }
-                      } 
-                    } fclose($file); 
-                  } 
-            ?>
-          </table>
-          </div>
-         </div>
-        </div>
-      </div>
-   </div>
-   <div class="alyssa col-sm-10" id="phoa">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Phoa Leung</h3>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-2">
-                <img src="assets/person.png">
-            </div>
-            <div class="col-sm-6">
-              <h4>Name: Phoa Leung</h4>
-              <h5>Student No: 41899023</h5>
-              <h5>Lecture Section: 101</h5>
-              <h5>Lab Section: L1D</h5>
-
-            </div>
-          </div>
-          <div class="row">
-            <h4 class="grades-header">Grades</h3>
-            <table class="grades table table-bordered col-sm-4">
-              <tr class="info">
-               <td>Lab 1</td>
-               <td>Quiz 1</td>
-               <td>Lab 2</td>
-               <td>Lab 3</td>
-               <td>MT 1</td>
-               <td>Lab 4</td>
-               <td>Quiz 2</td>
-               <td>MT 2</td>
-              </tr>
-              <tr>
-              <td>65%</td>
-              <td>76%</td>
-              <td>62%</td>
-              <td>98%</td>
-              <td class="danger">29%</td>
-              <td>70%</td>
-              <td>87%</td>
-              <td class="danger">30%</td>
-            </table>
-          </div>
-          <h4>Issue History</h4>
-          <div class="row student-issue-sort">
-           <ul class="nav nav-pills col-md-8" style="margin-bottom:0px">
-            <li class="active left">
-             <a href="#unresolved_tab_student_phoa" data-toggle="tab">Unresolved</a>
-            </li>
-
-            <li class="left">
-             <a href="#resolved_tab_student_phoa" data-toggle="tab">Resolved</a>
-            </li>
-           </ul>
-          </div>
-          <div class="tab-content" id="studentTabContent">
-            <div class="tab-pane active" id="unresolved_tab_student_phoa">
-             <table class="table table-hover table-striped" id="unresolved_tab_table_student">
-              <tr class="info">
-               <td>Ref#</td>
-               <td>Submitted by</td>
-               <td>Issue Title</td>
-               <td>Date Submitted</td>
-               <td>Student #</td>
-                <td>Student Name</td>
-               <td>Last Activity</td>
-               <td>Label</td>
-              </tr>
-              <?php $filepath="files/unresolved_issues.txt" ; 
-                    if (file_exists($filepath)) 
-                    { 
-                      $file=fopen($filepath, 'r'); 
-                      while (!feof($file)) 
-                      { 
-                        $lines=fgets($file); 
-                        $first_char=$lines[0];
-                        if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-                        { 
-                          $split=explode( '|', $lines);
-                          $name = str_replace(' ', '', $split[5]);
-                            if ($name=='PhoaLeung') { 
-                            echo '<tr class="danger">'; 
-                            foreach($split as $line) 
-                            { 
-                              echo '<td>'.$line. '</td>';
-                            } 
-                            echo '</tr>'; 
-                          }
-                        } 
-                      } fclose($file); 
-                    } 
-              ?>
-             </table>
-          </div>
-          <div class="tab-pane" id="resolved_tab_student_phoa">
-           <table class="table table-hover table-striped" id="resolved_tab_table_student">
-            <tr class="info">
-             <td>Ref#</td>
-             <td>Submitted by</td>
-             <td>Issue Title</td>
-             <td>Date Submitted</td>
-             <td>Student #</td>
-             <td>Student Name</td>
-             <td>Last Activity</td>
-             <td>Label</td>
-            </tr>
-            <?php $filepath="files/resolved_issues.txt" ; 
-                  if (file_exists($filepath)) 
-                  { 
-                    $file=fopen($filepath, 'r'); 
-                    while (!feof($file)) 
-                    { 
-                      $lines=fgets($file); 
-                      $first_char=$lines[0];
-                      if ($first_char !='*' && $first_char !='^' && trim($lines) !='') 
-                      { 
-                        $split=explode( '|', $lines);
-                        $name = str_replace(' ', '', $split[5]);
-                          if ($name=='PhoaLeung') { 
-                          echo '<tr class="success">'; 
-                          foreach($split as $line) 
-                          { 
-                            echo '<td>'.$line. '</td>';
-                          } 
-                          echo '</tr>'; 
-                        }
-                      } 
-                    } fclose($file); 
-                  } 
-            ?>
-          </table>
-          </div>
-         </div>
-        </div>
-      </div>
     </div> 
-	</div>
-	
+	 </div> 
+   
    <!--Issues Page-->
    <div class="tab-pane active" id="issues_tab">
     <div class="panel-heading" align="center">
