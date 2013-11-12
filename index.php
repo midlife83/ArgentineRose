@@ -153,6 +153,9 @@
              <a href="#resolved_tab_student_alyssa" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
+		   
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_alyssa">
@@ -288,6 +291,8 @@
              <a href="#resolved_tab_student_jeff" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_jeff">
@@ -423,6 +428,8 @@
              <a href="#resolved_tab_student_ashley" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_ashley">
@@ -557,6 +564,8 @@
              <a href="#resolved_tab_student_tommy" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_tommy">
@@ -692,6 +701,8 @@
              <a href="#resolved_tab_student_vincent" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_vincent">
@@ -827,6 +838,8 @@
              <a href="#resolved_tab_student_john" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_john">
@@ -962,6 +975,8 @@
              <a href="#resolved_tab_student_phoa" data-toggle="tab">Resolved</a>
             </li>
            </ul>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
+				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_phoa">
