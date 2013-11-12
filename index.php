@@ -91,13 +91,13 @@
     </form>
     <div class="col-sm-2" >
       <div class="list-group student-list"  id="student_list_div">
-        <a id="alyssa-anchor" class="list-group-item active" onclick="displayAlyssa()">Dunn, Alyssa</a>
+        <a id="alyssa-anchor" class="list-group-item active" onclick="displayAlyssa()" style="background-color:#ffE6E6;">Dunn, Alyssa</a>
         <a id="jeff-anchor" class="list-group-item" onclick="displayJeff()">Jung, Jeff</a>
         <a id="ashley-anchor" class="list-group-item" onclick="displayAshley()">Chen, Ashley</a>
-        <a id="tommy-anchor" class="list-group-item" onclick="displayTommy()">Nan, Tommy</a>
+        <a id="tommy-anchor" class="list-group-item" onclick="displayTommy()" style="background-color:#ffE6E6;">Nan, Tommy</a>
         <a id="vincent-anchor" class="list-group-item" onclick="displayVincent()">Chiu, Vincent</a>
-        <a id="john-anchor" class="list-group-item" onclick="displayJohn()">Leung, John</a>
-        <a id="phoa-anchor" class="list-group-item" onclick="displayPhoa()">Leung, Phoa</a>
+        <a id="john-anchor" class="list-group-item" onclick="displayJohn()" style="background-color:#ffE6E6;">Leung, John</a>
+        <a id="phoa-anchor" class="list-group-item" onclick="displayPhoa()" style="background-color:#ffE6E6;">Leung, Phoa</a>
       </div>
     </div>
     <div class="alyssa col-sm-10" id="alyssa">

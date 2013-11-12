@@ -1,19 +1,11 @@
 3321|Joan McGray|Alyssa is busy this weekend...   |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
-3228|Karrot McLean|Ashley didn't do well on lab...|Oct 05. 2013|32124342|Ashley Chen  |Oct 21. 2013|Lab3   
-3129|Greger Wales|Vincent cheated on last...      |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
 3112|Meg Kallen|John reported that there ...      |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1     
 3062|Bonny Salvo|John yelled at the TA of ...     |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1    
 2921|Erica Wilbur|Alyssa said this weekend...     |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
-2828|Jazmine Hermes|Ashley failed on lab 6...     |Oct 05. 2013|32124342|Ashley Chen  |Oct 21. 2013|Lab3   
-2729|Shasta Francois|Vincent cheated on last...   |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
 2621|Joan McGray|Tommy is making up this weekend..|Nov 10. 2013|12345678|Tommy Nan    |Nov 12. 2013|General
 2528|Karrot McLean|John didn't do well on lab...  |Oct 05. 2013|32124342|John Leung   |Oct 21. 2013|Lab3   
-2429|Greger Wales|Vincent seems have cheated...   |Sep 15. 2013|23737891|Vincent Chiu |sept 05. 2013|General
 2362|Meg Kallen|John reported that there ...      |May 27. 2013|71822562|John Leung   |June 07. 2013|Q1     
 2262|Bonny Salvo|Tommy reported that there ...    |May 27. 2013|71822562|Tommy Nan    |June 07. 2013|Q1    
 2121|Erica Wilbur|Alyssa needs help on Q1...      |Nov 10. 2013|12345678|Alyssa Dunn  |Nov 12. 2013|General
 2028|Jazmine Hermes|Phoa did very well on lab...  |Oct 05. 2013|32124342|Phoa Leung   |Oct 21. 2013|Lab3   
 1929|Shasta Francois|Phoa has personal issues...  |Sep 15. 2013|23737891|Phoa Leung   |sept 05. 2013|General
-1528|Karrot McLean|Jeff requested that all TAs... |Oct 05. 2013|32124342|Jeff Jung    |Oct 21. 2013|Lab3   
-1429|Greger Wales|Jeff suggested that profs ...   |Sep 15. 2013|23737891|Jeff Jung    |sept 05. 2013|General
-1362|Meg Kallen|Jeff reported that there ...      |May 27. 2013|71822562|Jeff Jung    |June 07. 2013|Q1     
