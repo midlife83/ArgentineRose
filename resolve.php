@@ -41,7 +41,7 @@
     <div class="row">
      <div class="col-md-8">	
 	  <p>
-		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
+		Reported by Maggie Phan on Nov 29th 2013 17:15
       </p>
 	 
       <p>

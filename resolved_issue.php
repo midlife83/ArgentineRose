@@ -50,12 +50,12 @@
     <div class="row">
      <div class="col-md-8">
 	  <p>
-		Reported by Alyssa Dunn on Oct 17th 2013 2:13pm
+		Reported by [TA] Maggie Phan on Nov 29th 2013 17:15
       </p>
 	  <p>
         Resolved by 
         <?php echo $assignment; ?>
-         on Oct 19th 2013 7:13am
+         on Nov 29th 2013 17:30
       </p>
       <p>
        Assigned to
@@ -136,7 +136,7 @@
       <tr>
        <td>
         <font size="1">
-         <strong>Alyssa Dunn</strong>
+         <strong>Maggie Phan</strong>
         </font>
         <font color="gray">1 second ago</font>
        </td>
@@ -202,7 +202,7 @@
       <tr>
        <td>
         <font size="1">
-         <strong>Alyssa Dunn</strong>
+         <strong>Maggie Phan</strong>
         </font>
         <font color="gray">1 second ago</font>
        </td>
@@ -229,7 +229,7 @@
      <table>
      <tr>
      <td width="700">
-     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me</strong></font><font color="gray"></font>
+     <strong><font size="1">  </font></strong><font size="1"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maggie Phan</strong></font><font color="gray"></font>
        </td>
       </tr>   
       

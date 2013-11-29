@@ -564,8 +564,13 @@
              <a href="#resolved_tab_student_tommy" data-toggle="tab">Resolved</a>
             </li>
            </ul>
-		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButton"  
-				onclick="alert('Clicking this button would direct you to the Report An Issue page and automatically fill the student\'s information. Not implemented for this prototype'); return false;"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
+		   <button type="button" class="btn btn-default col-md-4" style="float:right;margin-bottom:0px; margin-top:5px; width:200px" id="markIssueButtonT" onclick="myFunction()"><span class="glyphicon glyphicon-plus-sign"></span> Report An Issue</button>
+<script>
+function myFunction()
+{
+$('#navigation-bar a[href="#report_issues_tab"]').tab('show');
+}
+</script>
           </div>
           <div class="tab-content" id="studentTabContent">
             <div class="tab-pane active" id="unresolved_tab_student_tommy">
@@ -1174,7 +1179,7 @@
        <div class="form-group">
         <label for="studentName" class="col-sm-2 control-label">Student Name</label>
         <div class="col-sm-4">
-         <input type="text" class="form-control" id="studentName" name="studentName" placeholder="Student Name">
+         <input type="text" class="form-control" id="studentName" name="studentName" placeholder="Student Name" value="Tommy Nan">
         </div>
        </div>
 
@@ -1182,7 +1187,7 @@
         <label for="studentNumber" class="col-sm-2 control-label">Student Number</label>
         <div class="col-sm-4">
          <input type="text" class="form-control" id="studentNumber" maxlength="8" name="studentNumber"
-         placeholder="Student Number">
+         placeholder="Student Number" value="23423534">
         </div>
        </div>
 
